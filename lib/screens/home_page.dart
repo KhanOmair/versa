@@ -244,7 +244,7 @@ class HomePageState extends State<HomePage>
   Widget _buildMobileDrawer() {
     return Drawer(
       child: Container(
-        color: AppTheme.primaryDark,
+        color: AppTheme.primaryLight,
         child: Column(
           children: [
             DrawerHeader(
