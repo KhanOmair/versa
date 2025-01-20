@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:versa_web/widgets/sections/about_section.dart';
 import '../widgets/sections/hero_section.dart';
@@ -65,7 +66,6 @@ class HomePageState extends State<HomePage>
   void scrollToSection(GlobalKey key, String section) {
     final context = key.currentContext;
     if (context != null) {
-      // Set flags to indicate button-triggered scroll
       _isButtonScroll = true;
       _isScrolling = true;
 
@@ -78,15 +78,13 @@ class HomePageState extends State<HomePage>
       _scrollController
           .animateTo(
         scrollPosition,
-        duration: const Duration(milliseconds: 800),
-        curve: Curves.easeInOutCubic,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeOutQuart,
       )
           .then((_) {
-        // Reset scrolling flag after animation completes
         _isScrolling = false;
       });
 
-      // Update selected section
       setState(() {
         _selectedSection = section;
       });
@@ -97,56 +95,53 @@ class HomePageState extends State<HomePage>
   String _currentSection = '';
 
   void _onScroll() {
-    if (!mounted) return;
+    if (!mounted || _isScrolling) return;
 
-    // Only clear selection if scroll was manual and not during animation
-    if (!_isButtonScroll && !_isScrolling) {
-      setState(() {
-        _selectedSection = '';
-      });
-    }
+    Future.delayed(const Duration(milliseconds: 100), () {
+      if (!mounted) return;
 
-    // Reset the button scroll flag
-    _isButtonScroll = false;
+      if (!_isButtonScroll) {
+        setState(() {
+          _selectedSection = '';
+        });
+      }
 
-    // Get viewport height to calculate visibility
-    // final viewportHeight = MediaQuery.of(context).size.height;
-    final scrollPosition = _scrollController.offset;
-    final appBarHeight = AppBar().preferredSize.height;
+      _isButtonScroll = false;
 
-    // Get section positions with AppBar offset
-    final sections = [
-      ('about', _getSectionPosition(aboutKey)),
-      ('products', _getSectionPosition(productsKey)),
-      ('services', _getSectionPosition(servicesKey)),
-      ('contact', _getSectionPosition(contactKey)),
-    ];
+      final scrollPosition = _scrollController.offset;
+      final appBarHeight = AppBar().preferredSize.height;
 
-    // Find the current section based on scroll position
-    String newSection = '';
-    for (int i = 0; i < sections.length; i++) {
-      final currentPos = sections[i].$2;
-      final nextPos =
-          i < sections.length - 1 ? sections[i + 1].$2 : double.infinity;
+      // Get section positions
+      final sections = [
+        ('about', _getSectionPosition(aboutKey)),
+        ('products', _getSectionPosition(productsKey)),
+        ('services', _getSectionPosition(servicesKey)),
+        ('contact', _getSectionPosition(contactKey)),
+      ];
 
-      if (currentPos != null) {
-        // Adjust threshold to account for AppBar and add some padding
-        final adjustedScrollPosition = scrollPosition + appBarHeight + 100;
+      String newSection = '';
+      for (int i = 0; i < sections.length; i++) {
+        final currentPos = sections[i].$2;
+        final nextPos =
+            i < sections.length - 1 ? sections[i + 1].$2 : double.infinity;
 
-        if (adjustedScrollPosition >= currentPos &&
-            (nextPos == null || adjustedScrollPosition < nextPos)) {
-          newSection = sections[i].$1;
-          break;
+        if (currentPos != null) {
+          final adjustedScrollPosition = scrollPosition + appBarHeight + 100;
+
+          if (adjustedScrollPosition >= currentPos &&
+              (nextPos == null || adjustedScrollPosition < nextPos)) {
+            newSection = sections[i].$1;
+            break;
+          }
         }
       }
-    }
 
-    // Only update state if section changed
-    if (_currentSection != newSection) {
-      setState(() {
-        _currentSection = newSection;
-      });
-    }
+      if (_currentSection != newSection) {
+        setState(() {
+          _currentSection = newSection;
+        });
+      }
+    });
   }
 
   double? _getSectionPosition(GlobalKey key) {
@@ -173,21 +168,52 @@ class HomePageState extends State<HomePage>
       appBar: isMobile ? _buildMobileAppBar() : _buildDesktopAppBar(),
       drawer: isMobile ? _buildMobileDrawer() : null,
       body: NotificationListener<ScrollNotification>(
-        onNotification: (scrollNotification) => false,
-        child: SingleChildScrollView(
-          controller: _scrollController,
-          child: Column(
-            children: [
-              HeroSection(
-                fadeAnimation: _fadeAnimation,
-                slideAnimation: _slideAnimation,
+        onNotification: (scrollNotification) {
+          if (!_isScrolling) {
+            _onScroll();
+          }
+          return false;
+        },
+        child: ScrollConfiguration(
+          behavior: ScrollConfiguration.of(context).copyWith(
+            physics: const ClampingScrollPhysics(),
+            dragDevices: {
+              PointerDeviceKind.touch,
+              PointerDeviceKind.mouse,
+            },
+          ),
+          child: SingleChildScrollView(
+            controller: _scrollController,
+            physics: const AlwaysScrollableScrollPhysics(
+              parent: RangeMaintainingScrollPhysics(),
+            ),
+            child: RepaintBoundary(
+              child: Column(
+                children: [
+                  RepaintBoundary(
+                    child: HeroSection(
+                      fadeAnimation: _fadeAnimation,
+                      slideAnimation: _slideAnimation,
+                    ),
+                  ),
+                  RepaintBoundary(
+                    child: AboutSection(key: aboutKey),
+                  ),
+                  RepaintBoundary(
+                    child: ProductsSection(key: productsKey),
+                  ),
+                  RepaintBoundary(
+                    child: ServicesSection(key: servicesKey),
+                  ),
+                  RepaintBoundary(
+                    child: ContactSection(key: contactKey),
+                  ),
+                  const RepaintBoundary(
+                    child: FooterSection(),
+                  ),
+                ],
               ),
-              AboutSection(key: aboutKey),
-              ProductsSection(key: productsKey),
-              ServicesSection(key: servicesKey),
-              ContactSection(key: contactKey),
-              const FooterSection(),
-            ],
+            ),
           ),
         ),
       ),
@@ -197,6 +223,7 @@ class HomePageState extends State<HomePage>
   PreferredSizeWidget _buildMobileAppBar() {
     return AppBar(
       backgroundColor: AppTheme.primaryDark,
+      iconTheme: const IconThemeData(color: AppTheme.primaryLight),
       elevation: 0,
       title: Image.asset(
         'assets/images/versa_logo.png',
@@ -244,7 +271,7 @@ class HomePageState extends State<HomePage>
   Widget _buildMobileDrawer() {
     return Drawer(
       child: Container(
-        color: AppTheme.primaryLight,
+        color: AppTheme.primaryDark,
         child: Column(
           children: [
             DrawerHeader(
@@ -276,7 +303,7 @@ class HomePageState extends State<HomePage>
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
-                '© 2024 Versa',
+                '© 2025 Versa',
                 style: TextStyle(
                   color: AppTheme.primaryLight.withOpacity(0.5),
                   fontSize: 12,
