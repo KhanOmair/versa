@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:versa_web/config/app_config.dart';
 import 'package:versa_web/utils/app_theme.dart';
 import 'dart:convert';
 
@@ -37,13 +38,6 @@ class _ContactSectionState extends State<ContactSection> {
     // Add more countries as needed
   ];
 
-  static const String serviceId =
-      'service_6udjulm'; // Replace with your EmailJS Service ID
-  static const String templateId =
-      'template_rwekgca'; // Replace with your EmailJS Template ID
-  static const String publicKey =
-      'J0dk9NK9XxmbvB78i'; // Replace with your EmailJS Public Key
-
   Future<void> _submitForm() async {
     if (_formKey.currentState!.validate() && !_isLoading) {
       setState(() {
@@ -64,9 +58,9 @@ class _ContactSectionState extends State<ContactSection> {
 
         final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
         final body = {
-          'service_id': serviceId,
-          'template_id': templateId,
-          'user_id': publicKey,
+          'service_id': AppConfig.serviceId,
+          'template_id': AppConfig.templateId,
+          'user_id': AppConfig.publicKey,
           'template_params': templateParams,
         };
 
