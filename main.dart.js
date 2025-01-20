@@ -15528,7 +15528,7 @@ break $label0$0}if(B.H===a){s=!1
 break $label0$0}throw A.e(A.dW(u.P))}return s},
 as4(a){var s
 $label0$0:{if(B.bH===a||B.cH===a||B.cI===a){s=12
-break $label0$0}if(B.aI===a||B.cG===a||B.ah===a){s=14
+break $label0$0}if(B.aI===a||B.cG===a||B.ag===a){s=14
 break $label0$0}throw A.e(A.dW(u.P))}return s},
 O7:function O7(a,b,c,d,e,f){var _=this
 _.e=a
@@ -15635,7 +15635,7 @@ _.w=h
 _.x=i},
 SI:function SI(){},
 aDE(a){return A.asa(a,null,null,B.SC,B.Sy,B.SF)},
-asa(a,b,c,d,e,f){switch(a){case B.ah:b=B.SG
+asa(a,b,c,d,e,f){switch(a){case B.ag:b=B.SG
 c=B.SI
 break
 case B.aI:case B.cG:b=B.Sz
@@ -45088,7 +45088,7 @@ A.aiD.prototype={
 $0(){var s=self,r=s.window.navigator.platform.toLowerCase()
 if(B.d.ck(r,"mac"))return B.bH
 if(B.d.ck(r,"win"))return B.cI
-if(B.d.q(r,"iphone")||B.d.q(r,"ipad")||B.d.q(r,"ipod"))return B.ah
+if(B.d.q(r,"iphone")||B.d.q(r,"ipad")||B.d.q(r,"ipod"))return B.ag
 if(B.d.q(r,"android"))return B.aI
 if(s.window.matchMedia("only screen and (pointer: fine)").matches)return B.cH
 return B.aI},
@@ -47346,7 +47346,7 @@ a=s.e
 if(a!=null){a=new A.Mr(a,a8)
 a0=a9.w
 $label0$0:{if(B.aI===a0||B.cG===a0||B.cH===a0||B.cI===a0){q=!0
-break $label0$0}if(B.ah===a0||B.bH===a0){q=a8
+break $label0$0}if(B.ag===a0||B.bH===a0){q=a8
 break $label0$0}throw A.e(A.dW(u.P))}a=A.bV(a8,a,!1,a8,a8,!1,a8,a8,!0,a8,a8,a8,a8,q,a8,a8,a8,a8,a8,a8,a8,a8,a8,a8,a8,a8,a8,a8,a8,a8)
 e.toString
 a=A.aB1(A.il(a,a8,a8,B.bI,!1,e,a8,a8,B.aE),1.34)}s=s.f
@@ -50722,7 +50722,7 @@ r.push(s)}if(q.h(0,B.av)!=null){s=q.h(0,B.av)
 s.toString
 r.push(s)}if(q.h(0,B.aw)!=null){s=q.h(0,B.aw)
 s.toString
-r.push(s)}if(q.h(0,B.ai)!=null){s=q.h(0,B.ai)
+r.push(s)}if(q.h(0,B.ah)!=null){s=q.h(0,B.ah)
 s.toString
 r.push(s)}if(q.h(0,B.bX)!=null){q=q.h(0,B.bX)
 q.toString
@@ -50766,7 +50766,7 @@ a.$1(s)}if(r.h(0,B.bX)!=null){s=r.h(0,B.bX)
 s.toString
 a.$1(s)}if(r.h(0,B.aw)!=null){s=r.h(0,B.aw)
 s.toString
-a.$1(s)}if(r.h(0,B.ai)!=null){r=r.h(0,B.ai)
+a.$1(s)}if(r.h(0,B.ah)!=null){r=r.h(0,B.ah)
 r.toString
 a.$1(r)}},
 gjk(){return!1},
@@ -50841,9 +50841,9 @@ q=a0==null?0:a0.am(B.ap,a2,a0.gbq())
 a0=a.h(0,B.ac)
 p=a0==null?0:a0.am(B.W,q,a0.gb7())
 a2=Math.max(a2-b.u.a.gdC(),0)
-a0=a.h(0,B.ai)
+a0=a.h(0,B.ah)
 o=a0==null?0:a0.am(B.ap,a2,a0.gbq())
-a0=a.h(0,B.ai)
+a0=a.h(0,B.ah)
 n=Math.max(a2-(a0==null?0:a0.am(B.W,o,a0.gb7())),0)
 a0=a.h(0,B.aw)
 m=a0==null?0:a0.am(B.ap,n,a0.gbq())
@@ -50937,18 +50937,18 @@ j=j==null?B.o:j.gp()
 a=Math.max(0,f1.b-(n.a+k.a.a+j.a+b+e9.u.a.c))
 s.n(0,o.h(0,B.V),e9.jr(o.h(0,B.V),p.td(a*e)))
 s.n(0,o.h(0,B.av),e9.jr(o.h(0,B.av),p.Fe(c,c)))
-s.n(0,o.h(0,B.ai),e9.jr(o.h(0,B.ai),l))
+s.n(0,o.h(0,B.ah),e9.jr(o.h(0,B.ah),l))
 e=o.h(0,B.aw)
 j=o.h(0,B.aw)
-k=o.h(0,B.ai)
+k=o.h(0,B.ah)
 f1=k==null?B.o:k.gp()
 s.n(0,e,e9.jr(j,l.td(Math.max(0,l.b-f1.a))))
 a0=o.h(0,B.V)==null?0:e9.u.c
 if(e9.u.f.gnu()){f1=s.h(0,o.h(0,B.V))
 f1.toString
 a1=Math.max(a0-f1,0)}else a1=a0
-if(o.h(0,B.ai)==null)a2=0
-else{f1=s.h(0,o.h(0,B.ai))
+if(o.h(0,B.ah)==null)a2=0
+else{f1=s.h(0,o.h(0,B.ah))
 f1.toString
 a2=f1+8}f1=o.h(0,B.aw)
 a3=(f1==null?f0:f1.gp())!=null&&o.h(0,B.aw).gp().b>0
@@ -51020,10 +51020,10 @@ c8=c6+c7*c4
 j=e9.ab
 f1=e9.gDc()?B.yk:B.yl
 c9=e9.a7U(c6,b0+c5/2+(c1-(2+a9))/2,c6+c7,f1)
-if(o.h(0,B.ai)!=null){f1=s.h(0,o.h(0,B.ai))
+if(o.h(0,B.ah)!=null){f1=s.h(0,o.h(0,B.ah))
 f1.toString
 d0=c1+8+f1
-d1=o.h(0,B.ai).gp().b+8}else{d0=0
+d1=o.h(0,B.ah).gp().b+8}else{d0=0
 d1=0}if(a3){f1=s.h(0,o.h(0,B.aw))
 f1.toString
 d2=c1+8+f1
@@ -51094,22 +51094,22 @@ f1.toString
 e5-=d9.$2(f1,e5-o.h(0,B.ac).gp().a)}else e5=e3
 if(o.h(0,B.al)!=null){f1=o.h(0,B.al)
 f1.toString
-e1.$2(f1,e5-o.h(0,B.al).gp().a)}break}if(o.h(0,B.aw)!=null||o.h(0,B.ai)!=null){d8.b=d5
+e1.$2(f1,e5-o.h(0,B.al).gp().a)}break}if(o.h(0,B.aw)!=null||o.h(0,B.ah)!=null){d8.b=d5
 e0.b=d4
 switch(e9.S.a){case 0:if(o.h(0,B.aw)!=null){f1=o.h(0,B.aw)
 f1.toString
 q=o.h(0,B.aw).gp()
 n=o.h(0,B.a5)
 n=n==null?B.o:n.gp()
-e1.$2(f1,e3-q.a-n.a)}if(o.h(0,B.ai)!=null){f1=o.h(0,B.ai)
+e1.$2(f1,e3-q.a-n.a)}if(o.h(0,B.ah)!=null){f1=o.h(0,B.ah)
 f1.toString
 e1.$2(f1,e2)}break
 case 1:if(o.h(0,B.aw)!=null){f1=o.h(0,B.aw)
 f1.toString
 q=o.h(0,B.a5)
-e1.$2(f1,e2+(q==null?B.o:q.gp()).a)}if(o.h(0,B.ai)!=null){f1=o.h(0,B.ai)
+e1.$2(f1,e2+(q==null?B.o:q.gp()).a)}if(o.h(0,B.ah)!=null){f1=o.h(0,B.ah)
 f1.toString
-e1.$2(f1,e3-o.h(0,B.ai).gp().a)}break}}if(o.h(0,B.V)!=null){f1=o.h(0,B.V).b
+e1.$2(f1,e3-o.h(0,B.ah).gp().a)}break}}if(o.h(0,B.V)!=null){f1=o.h(0,B.V).b
 f1.toString
 e6=t.q.a(f1).a.a
 f1=o.h(0,B.V)
@@ -51199,7 +51199,7 @@ f.$1(e.h(0,B.ac))
 f.$1(e.h(0,B.av))
 f.$1(e.h(0,B.ao))
 f.$1(e.h(0,B.aw))
-f.$1(e.h(0,B.ai))},
+f.$1(e.h(0,B.ah))},
 j1(a){return!0},
 cm(a,b){var s,r,q,p,o,n,m
 for(s=this.ghv(),r=s.length,q=t.q,p=0;p<s.length;s.length===r||(0,A.E)(s),++p){o=s[p]
@@ -52423,7 +52423,7 @@ return A.bV(s,this.cf.$1(a),!1,s,s,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s
 R0(a,b,c,d){var s,r
 A.V(a)
 s=A.V(a).w
-r=B.fJ.h(0,this.a.cx.a?B.ah:s)
+r=B.fJ.h(0,this.a.cx.a?B.ag:s)
 if(r==null)r=B.lB
 return r.R_(this,a,b,c,d,this.$ti.c)}}
 A.BM.prototype={}
@@ -53282,7 +53282,7 @@ s.aV$=null
 s.aG()}}
 A.Kv.prototype={
 J(a){var s=this,r=null
-if(A.V(a).w===B.ah)return new A.pI(8,B.cD,s.c,s.d,s.e===!0,B.Lw,3,r,B.iF,B.Dz,B.aP,A.ED(),r,r,r)
+if(A.V(a).w===B.ag)return new A.pI(8,B.cD,s.c,s.d,s.e===!0,B.Lw,3,r,B.iF,B.Dz,B.aP,A.ED(),r,r,r)
 return new A.tF(r,s.c,s.d,s.e,r,r,r,B.bO,B.dO,B.t,A.ED(),r,r,r)}}
 A.tF.prototype={
 ai(){return new A.Pj(new A.bg(null,t.A),null,null,B.k)}}
@@ -55224,13 +55224,13 @@ a4s(){var s,r=this.c
 r.toString
 s=A.V(r).w
 $label0$0:{if(B.bH===s||B.cH===s||B.cI===s){r=24
-break $label0$0}if(B.aI===s||B.cG===s||B.ah===s){r=32
+break $label0$0}if(B.aI===s||B.cG===s||B.ag===s){r=32
 break $label0$0}throw A.e(A.dW(u.P))}return r},
 a4r(){var s,r=this.c
 r.toString
 s=A.V(r).w
 $label0$0:{if(B.bH===s||B.cH===s||B.cI===s){r=B.Ed
-break $label0$0}if(B.aI===s||B.cG===s||B.ah===s){r=B.E1
+break $label0$0}if(B.aI===s||B.cG===s||B.ag===s){r=B.E1
 break $label0$0}throw A.e(A.dW(u.P))}return r},
 a1A(a5){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,c,b,a,a0,a1,a2,a3=this,a4=null
 a3.a.toString
@@ -59604,7 +59604,7 @@ for(r=t.US,n=a4/2,f=i.a;s!=null;){e=s.b
 e.toString
 r.a(e)
 d=a.ab
-switch(d.a){case 0:case 1:if(A.au7(A.aHP(a.u),a.ah,a.au)===(d===B.ag))c=0
+switch(d.a){case 0:case 1:if(A.au7(A.aHP(a.u),a.ah,a.au)===(d===B.af))c=0
 else{d=s.id
 c=a4-a.vY(d==null?A.Z(A.ay(a0+A.q(s).k(0)+"#"+A.b6(s))):d)}break
 case 2:d=s.id
@@ -67775,7 +67775,7 @@ return A.aBI(s.f,s.x,null,null,s.c,r.w,s.d,s.r)}}
 A.Hb.prototype={
 ga8N(){switch(this.e.a){case 0:return!0
 case 1:var s=this.w
-return s===B.ag||s===B.CP}},
+return s===B.af||s===B.CP}},
 I7(a){var s=this.x
 s=this.ga8N()?A.cF(a):null
 return s},
@@ -68789,7 +68789,7 @@ if(s!==0){r=r.b
 r=!(r.a===0&&r.b===s)}else r=!1
 return r}},
 gajq(){var s,r,q
-if(A.aY()!==B.ah)return!1
+if(A.aY()!==B.ag)return!1
 s=this.a
 s=s.c.a
 r=s.b
@@ -68798,7 +68798,7 @@ r=r.b
 s=q!==r&&B.d.qo(B.d.U(s.a,q,r))!==""
 return s},
 gWm(){var s,r,q
-if(A.aY()!==B.ah)return!1
+if(A.aY()!==B.ag)return!1
 s=this.a
 s=s.c.a
 r=s.b
@@ -69011,14 +69011,14 @@ s.toString
 q=A.ame(s)
 if(o.go!==q){o.go=q
 if(o.gwR())o.rD()
-else if(!o.go&&o.d!=null)o.OW()}if(A.aY()!==B.ah&&A.aY()!==B.aI)return
+else if(!o.go&&o.d!=null)o.OW()}if(A.aY()!==B.ag&&A.aY()!==B.aI)return
 s=o.c
 s.toString
 p=A.W(s,B.yU,t.w).w.gq4()
 s=o.fy
 if(s==null){o.fy=p
 return}if(p!==s){o.fy=p
-if(A.aY()===B.ah)o.lZ(!1)
+if(A.aY()===B.ag)o.lZ(!1)
 if(A.aY()===B.aI)o.fD()}},
 aE(a){var s,r,q,p,o=this
 o.b1(a)
@@ -69547,7 +69547,7 @@ Oe(){return this.Of(null)},
 Q4(a){var s,r,q,p,o,n,m,l,k,j,i,h,g,f,e=this,d=null
 e.a.toString
 s=A.aY()
-if(s!==B.ah)return
+if(s!==B.ag)return
 if(B.b.gcd(e.gfd().f).k4!==B.hg)return
 s=e.gN().an.f
 s.toString
@@ -71360,7 +71360,7 @@ p=n==null?A.k(p).i("bl.T").a(n):n
 l.a=o+(p==null?k:p)}if(l.a.length!==0){k=this.c.ac(t.I)
 k.toString
 m=k.w
-if(A.aY()===B.ah)A.apO(new A.a_R(l,m),t.H)
+if(A.aY()===B.ag)A.apO(new A.a_R(l,m),t.H)
 else A.KE(l.a,m,B.ld)}return!q}}
 A.a_P.prototype={
 $1(a){var s=a.f,r=s.y
@@ -73977,7 +73977,7 @@ return A.X(A.q1(B.bO,null,t.H),$async$$1)
 case 5:B.cQ.fQ(B.mQ.A5(o))
 s=2
 break
-case 4:if(B.ah===p){B.cQ.fQ(B.mQ.A5(q.a.w))
+case 4:if(B.ag===p){B.cQ.fQ(B.mQ.A5(q.a.w))
 s=2
 break}s=2
 break
@@ -80933,7 +80933,7 @@ if(r.b){s=r.a.y.gI()
 s.toString
 s.ji()}r.w=!1
 r.d=r.e=0
-if(A.aY()===B.ah){s=r.a
+if(A.aY()===B.ag){s=r.a
 if(s.a.y2){s=s.y.gI()
 s.toString
 s=s.a.c.a.b
@@ -81135,7 +81135,7 @@ case null:case void 0:break}return
 case 4:case 3:case 5:h=s.gI()
 h.toString
 return h.gN().v8(B.a4,o.V(0,q).V(0,p),r)}}s=i.f
-if(s.a!==s.b)s=A.aY()!==B.ah&&A.aY()!==B.bH
+if(s.a!==s.b)s=A.aY()!==B.ag&&A.aY()!==B.bH
 else s=!0
 if(s)return i.ow(a.d,B.a4)
 h=h.y
@@ -81460,7 +81460,7 @@ uJ(){this.Ei(this.d.uJ())
 this.xe()},
 xe(){var s=this.grL(),r=this.d,q=r.a,p=q.length!==0&&r.b>0
 s.sl(new A.rW(p,r.gR3()))
-if(A.aY()!==B.ah)return
+if(A.aY()!==B.ag)return
 s=$.anK()
 if(s.b===this){q=q.length!==0&&r.b>0
 r=r.gR3()
@@ -83360,7 +83360,7 @@ s.ZM()},
 J(a){var s,r,q,p=this,o=null,n=p.c
 n.toString
 s=t.w
-n=A.W(n,o,s).w.a.a<800?A.Ve(o,B.af,!0,0,A.a1N("assets/images/versa_logo.png",B.eR,30,o)):p.a1i()
+n=A.W(n,o,s).w.a.a<800?A.Ve(o,B.ai,!0,0,A.a1N("assets/images/versa_logo.png",B.eR,30,o)):p.a1i()
 r=p.c
 r.toString
 s=A.W(r,o,s).w.a.a<800?p.a1n():o
@@ -83370,9 +83370,9 @@ q=p.f
 q===$&&A.a()
 return new A.yB(n,new A.cZ(new A.a1l(),A.am1(A.cw(A.b([new A.Hz(r,q,o),new A.EV(p.z),new A.JA(p.w),new A.KG(p.x),new A.vf(p.y),B.EB],t.p),B.a2,B.z,B.D),p.r,B.aR),o,t.WA),s,o)},
 a1i(){var s=this,r=null,q=t.p,p=A.dY(A.b([A.a1N("assets/images/versa_logo.png",B.eR,30,r),B.Ne,A.bT("Versa",r,r,r,r,A.bt(r,r,B.i,r,r,r,r,r,r,r,r,r,r,r,B.aT,r,r,!0,r,r,r,r,r,r,r,r),r,r)],q),B.a2,B.z,B.D)
-return A.Ve(A.b([s.vL("About Us",new A.a13(s),"about"),s.vL("Products",new A.a14(s),"products"),s.vL("Services",new A.a15(s),"services"),s.vL("Contact Us",new A.a16(s),"contact")],q),B.af,r,0,p)},
+return A.Ve(A.b([s.vL("About Us",new A.a13(s),"about"),s.vL("Products",new A.a14(s),"products"),s.vL("Services",new A.a15(s),"services"),s.vL("Contact Us",new A.a16(s),"contact")],q),B.ai,r,0,p)},
 a1n(){var s=this,r=null
-return new A.GJ(A.ba(r,A.cw(A.b([new A.GN(new A.bG(A.K(B.c.b6(229.5),37,37,37),r,new A.cX(B.m,B.m,new A.aJ(A.K(B.c.b6(25.5),255,255,255),1,B.v,-1),B.m),r,r,r,B.J),A.jn(A.a1N("assets/images/versa_logo.png",B.eR,40,r),r,r),r),s.vK("About Us",new A.a17(s),"about"),s.vK("Products",new A.a18(s),"products"),s.vK("Services",new A.a19(s),"services"),s.vK("Contact Us",new A.a1a(s),"contact"),B.Nv,new A.cj(B.DZ,A.bT("\xa9 2024 Versa",r,r,r,r,A.bt(r,r,A.K(B.c.b6(127.5),255,255,255),r,r,r,r,r,r,r,r,12,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r),r)],t.p),B.a2,B.z,B.D),B.l,B.af,r,r,r,r,r,r,r,r,r),r)},
+return new A.GJ(A.ba(r,A.cw(A.b([new A.GN(new A.bG(A.K(B.c.b6(229.5),37,37,37),r,new A.cX(B.m,B.m,new A.aJ(A.K(B.c.b6(25.5),255,255,255),1,B.v,-1),B.m),r,r,r,B.J),A.jn(A.a1N("assets/images/versa_logo.png",B.eR,40,r),r,r),r),s.vK("About Us",new A.a17(s),"about"),s.vK("Products",new A.a18(s),"products"),s.vK("Services",new A.a19(s),"services"),s.vK("Contact Us",new A.a1a(s),"contact"),B.Nv,new A.cj(B.DZ,A.bT("\xa9 2024 Versa",r,r,r,r,A.bt(r,r,A.K(B.c.b6(127.5),255,255,255),r,r,r,r,r,r,r,r,12,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r),r)],t.p),B.a2,B.z,B.D),B.l,B.i,r,r,r,r,r,r,r,r,r),r)},
 vK(a,b,c){var s=null,r=this.Q===c,q=r?B.aZ:B.i
 return new A.I5(A.bT(a,s,s,s,s,A.bt(s,s,q,s,s,s,s,s,s,s,s,16,s,s,r?B.ct:B.n,s,s,!0,s,s,s,s,s,s,s,s),s,s),B.E6,new A.a1b(this,b),r,A.K(B.c.b6(25.5),250,95,26),s)},
 vL(a,b,c){return new A.zl(new A.a1i(b,this.Q===c,a),null)}}
@@ -83471,13 +83471,13 @@ A.iu.prototype={
 J(a){var s=null,r=t.w,q=A.W(a,s,r).w.a.a<800?16:24,p=A.cD(16),o=A.W(a,s,r).w.a.a<800?A.akI(A.K(B.c.b6(25.5),0,0,0),1):s,n=A.W(a,s,r).w.a.a<800?s:A.b([new A.b2(1,B.B,A.K(20,0,0,0),B.jJ,15),new A.b2(0,B.B,A.K(8,0,0,0),B.eh,5)],t.V),m=A.W(a,s,r).w.a.a<800?8:12,l=A.K(B.c.b6(25.5),250,95,26),k=A.cD(12),j=A.W(a,s,r).w.a.a<800?20:24
 m=A.ba(s,A.wm(this.d,B.aZ,s,j),B.l,s,s,new A.bG(l,s,s,k,s,s,B.J),s,s,s,new A.ad(m,m,m,m),s,s,s)
 l=A.be(s,A.W(a,s,r).w.a.a<800?12:16,s)
-k=A.bT(this.c,s,s,s,s,A.bt(s,s,B.af,s,s,s,s,s,s,s,s,A.W(a,s,r).w.a.a<800?16:18,s,s,B.ct,s,s,!0,s,s,s,s,s,s,s,s),s,s)
+k=A.bT(this.c,s,s,s,s,A.bt(s,s,B.ai,s,s,s,s,s,s,s,s,A.W(a,s,r).w.a.a<800?16:18,s,s,B.ct,s,s,!0,s,s,s,s,s,s,s,s),s,s)
 j=A.be(s,A.W(a,s,r).w.a.a<800?8:12,s)
 r=A.W(a,s,r).w.a.a<800?12:14
 return A.ba(s,A.cw(A.b([m,l,k,j,A.bT(this.e,s,s,s,s,A.bt(s,s,A.K(204,37,37,37),s,s,s,s,s,s,s,s,r,s,s,s,s,1.5,!0,s,s,s,s,s,s,s,s),B.dk,s)],t.p),B.a2,B.z,B.c8),B.l,s,s,new A.bG(B.i,s,o,p,n,s,B.J),s,s,s,new A.ad(q,q,q,q),s,s,s)}}
 A.EV.prototype={
 J(a){var s=this,r=null
-return A.ba(B.dw,A.ba(r,A.cw(A.b([B.SR,B.cE,A.bT("Transforming Ideas into Digital Reality",r,r,r,r,A.bt(r,r,A.K(204,37,37,37),r,r,r,r,r,r,r,r,24,r,r,B.P,r,r,!0,r,r,r,r,r,r,r,r),r,r),B.kk,s.qT('Welcome to Versa, where innovation meets transformation. We are a SaaS company driven by the boundless energy of young talent and fortified by a wealth of experience. Our mission is simple yet profound: to revolutionize the way businesses approach their software challenges, enabling them to become industry leaders. The name Versa, inspired by the concept of "vice-versa," reflects our unwavering commitment to reversing your hurdles and turning them into stepping stones for success.'),B.ce,s.qT("At Versa, we pride ourselves on being more than just a service provider\u2014we are your growth partners. From humble beginnings brainstorming in vibrant cafes to collaborating with diverse clients across industries, we've mastered the art of identifying software requirements that truly matter. Our solutions are not one-size-fits-all; they are carefully crafted to align with your unique vision and business goals. Whether you're looking to modernize outdated systems, streamline operations, or develop cutting-edge applications, we ensure that every solution we deliver is intuitive, scalable, and future-ready."),B.ce,s.qT("What sets us apart is our passion for problem-solving and our dedication to excellence. We believe that the best software doesn't just solve problems\u2014it transforms businesses. By understanding the intricacies of your challenges, we design solutions that don't just work but thrive in the real world, helping you stay ahead of the curve."),B.ce,s.qT("We know that the digital landscape is ever-evolving, and staying competitive requires agility, creativity, and expertise. That's why we're here\u2014to provide you with the tools, strategies, and support you need to succeed. Let Versa be the bridge between where you are and where you want to be."),B.ce,s.qT("Your journey toward innovation starts here. Don't just take our word for it\u2014experience the Versa difference for yourself. Book an appointment today and let us show you how we can transform your vision into reality, one solution at a time.")],t.p),B.ag,B.z,B.D),B.l,r,B.i6,r,r,r,r,r,r,r,r),B.l,B.i,r,r,r,r,r,B.E7,r,r,1/0)},
+return A.ba(B.dw,A.ba(r,A.cw(A.b([B.SR,B.cE,A.bT("Transforming Ideas into Digital Reality",r,r,r,r,A.bt(r,r,A.K(204,37,37,37),r,r,r,r,r,r,r,r,24,r,r,B.P,r,r,!0,r,r,r,r,r,r,r,r),r,r),B.kk,s.qT('Welcome to Versa, where innovation meets transformation. We are a SaaS company driven by the boundless energy of young talent and fortified by a wealth of experience. Our mission is simple yet profound: to revolutionize the way businesses approach their software challenges, enabling them to become industry leaders. The name Versa, inspired by the concept of "vice-versa," reflects our unwavering commitment to reversing your hurdles and turning them into stepping stones for success.'),B.ce,s.qT("At Versa, we pride ourselves on being more than just a service provider\u2014we are your growth partners. From humble beginnings brainstorming in vibrant cafes to collaborating with diverse clients across industries, we've mastered the art of identifying software requirements that truly matter. Our solutions are not one-size-fits-all; they are carefully crafted to align with your unique vision and business goals. Whether you're looking to modernize outdated systems, streamline operations, or develop cutting-edge applications, we ensure that every solution we deliver is intuitive, scalable, and future-ready."),B.ce,s.qT("What sets us apart is our passion for problem-solving and our dedication to excellence. We believe that the best software doesn't just solve problems\u2014it transforms businesses. By understanding the intricacies of your challenges, we design solutions that don't just work but thrive in the real world, helping you stay ahead of the curve."),B.ce,s.qT("We know that the digital landscape is ever-evolving, and staying competitive requires agility, creativity, and expertise. That's why we're here\u2014to provide you with the tools, strategies, and support you need to succeed. Let Versa be the bridge between where you are and where you want to be."),B.ce,s.qT("Your journey toward innovation starts here. Don't just take our word for it\u2014experience the Versa difference for yourself. Book an appointment today and let us show you how we can transform your vision into reality, one solution at a time.")],t.p),B.af,B.z,B.D),B.l,r,B.i6,r,r,r,r,r,r,r,r),B.l,B.i,r,r,r,r,r,B.E7,r,r,1/0)},
 qT(a){var s=null
 return A.ba(s,A.bT(a,s,s,s,s,A.bt(s,s,A.K(204,37,37,37),s,s,s,s,s,s,s,s,16,s,s,s,s,1.6,!0,s,s,s,s,s,s,s,s),s,s),B.l,s,B.cR,s,s,s,s,s,s,s,s)}}
 A.vf.prototype={
@@ -83575,7 +83575,7 @@ i=A.be(d,A.W(a2,d,c).w.a.a<800?12:16,d)
 h=e.ol("24/7 Support","Round-the-clock technical assistance",A.W(a2,d,c).w.a.a<800)
 g=A.be(d,A.W(a2,d,c).w.a.a<800?24:30,d)
 f=t.p
-g=A.dC(A.cw(A.b([a,a0,a1,s,r,q,p,o,n,m,l,k,j,i,h,g,A.wz(!1,d,!0,A.bT("You can also reach us at sales@versahq.online or\ngive us a call at +1 (602) 838-0848",d,d,d,d,A.bt(d,d,B.i,d,d,d,d,d,d,d,d,A.W(a2,d,c).w.a.a<800?14:18,d,d,d,d,d,!0,d,d,d,d,d,d,d,d),d,d),d,!0,d,d,d,d,d,d,d,d,d,new A.acp(),d,d,d,d)],f),B.ag,B.z,B.D),2)
+g=A.dC(A.cw(A.b([a,a0,a1,s,r,q,p,o,n,m,l,k,j,i,h,g,A.wz(!1,d,!0,A.bT("You can also reach us at sales@versahq.online or\ngive us a call at +1 (602) 838-0848",d,d,d,d,A.bt(d,d,B.i,d,d,d,d,d,d,d,d,A.W(a2,d,c).w.a.a<800?14:18,d,d,d,d,d,!0,d,d,d,d,d,d,d,d),d,d),d,!0,d,d,d,d,d,d,d,d,d,new A.acp(),d,d,d,d)],f),B.af,B.z,B.D),2)
 a=A.be(d,d,A.W(a2,d,c).w.a.a<800?20:40)
 a0=A.W(a2,d,c).w.a.a<800?16:24
 a1=A.cD(12)
@@ -83596,11 +83596,11 @@ i=A.W(a2,d,c).w.a.a<800?16:20
 i=A.al9(d,d,B.aZ,d,d,d,d,d,d,B.i,d,d,new A.ad(0,i,0,i),d,new A.c_(A.cD(8),B.m),d,d,d,d)
 if(e.as)c=B.BB
 else{h=A.bT("Submit",d,d,d,d,A.bt(d,d,d,d,d,d,d,d,d,d,d,A.W(a2,d,c).w.a.a<800?14:16,d,d,B.P,d,d,!0,d,d,d,d,d,d,d,d),d,d)
-c=h}i=A.cw(A.b([r,q,p,o,n,m,l,k,A.be(A.apw(c,j,i),d,1/0)],f),B.ag,B.z,B.D)
-return A.ba(d,A.ba(d,A.dY(A.b([g,a,A.dC(A.ba(d,new A.wc(i,B.i5,e.d),B.l,d,d,new A.bG(B.i,d,d,a1,s,d,B.J),d,d,d,new A.ad(a0,a0,a0,a0),d,d,d),3)],f),B.ag,B.z,B.D),B.l,d,B.i6,d,d,d,d,d,d,d,d),B.l,B.af,d,d,d,d,d,new A.ad(b,b,b,b),d,d,1/0)},
+c=h}i=A.cw(A.b([r,q,p,o,n,m,l,k,A.be(A.apw(c,j,i),d,1/0)],f),B.af,B.z,B.D)
+return A.ba(d,A.ba(d,A.dY(A.b([g,a,A.dC(A.ba(d,new A.wc(i,B.i5,e.d),B.l,d,d,new A.bG(B.i,d,d,a1,s,d,B.J),d,d,d,new A.ad(a0,a0,a0,a0),d,d,d),3)],f),B.af,B.z,B.D),B.l,d,B.i6,d,d,d,d,d,d,d,d),B.l,B.ai,d,d,d,d,d,new A.ad(b,b,b,b),d,d,1/0)},
 ol(a,b,c){var s=null,r=A.wm(B.EJ,B.aZ,s,c?20:24),q=A.bT(a,s,s,s,s,A.bt(s,s,B.i,s,s,s,s,s,s,s,s,c?14:16,s,s,B.P,s,s,!0,s,s,s,s,s,s,s,s),s,s),p=c?12:14,o=t.p
-return A.dY(A.b([r,B.ki,A.dC(A.cw(A.b([q,B.Ni,A.bT(b,s,s,s,s,A.bt(s,s,A.K(204,255,255,255),s,s,s,s,s,s,s,s,p,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)],o),B.ag,B.z,B.D),1)],o),B.ag,B.z,B.D)},
-Ki(a,b,c,d){var s,r,q,p,o,n,m,l,k=null,j=A.b([A.c9(k,A.bt(k,k,B.af,k,k,k,k,k,k,k,k,c?12:14,k,k,B.n,k,k,!0,k,k,k,k,k,k,k,k),a)],t.VO)
+return A.dY(A.b([r,B.ki,A.dC(A.cw(A.b([q,B.Ni,A.bT(b,s,s,s,s,A.bt(s,s,A.K(204,255,255,255),s,s,s,s,s,s,s,s,p,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)],o),B.af,B.z,B.D),1)],o),B.af,B.z,B.D)},
+Ki(a,b,c,d){var s,r,q,p,o,n,m,l,k=null,j=A.b([A.c9(k,A.bt(k,k,B.ai,k,k,k,k,k,k,k,k,c?12:14,k,k,B.n,k,k,!0,k,k,k,k,k,k,k,k),a)],t.VO)
 j.push(B.Oy)
 j=A.a6I(k,k,B.bi,k,k,!0,k,A.c9(j,k,k),B.bh,k,k,B.ax,B.aE)
 s=A.bt(k,k,k,k,k,k,k,k,k,k,k,c?13:15,k,k,k,k,k,!0,k,k,k,k,k,k,k,k)
@@ -83611,10 +83611,10 @@ o=A.K(51,37,37,37)
 n=A.cD(8)
 m=A.K(51,37,37,37)
 l=A.cD(8)
-return A.cw(A.b([j,B.Nj,A.aDc(b,A.aq2(k,new A.eg(4,p,new A.aJ(o,1,B.v,-1)),k,new A.ad(r,q,r,q),k,k,k,k,!0,new A.eg(4,n,new A.aJ(m,1,B.v,-1)),k,new A.eg(4,A.cD(8),B.zG),k,k,k,B.i,!0,k,k,k,k,new A.eg(4,l,new A.aJ(B.aZ,1,B.v,-1)),k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k),d,s,k)],t.p),B.ag,B.z,B.D)},
+return A.cw(A.b([j,B.Nj,A.aDc(b,A.aq2(k,new A.eg(4,p,new A.aJ(o,1,B.v,-1)),k,new A.ad(r,q,r,q),k,k,k,k,!0,new A.eg(4,n,new A.aJ(m,1,B.v,-1)),k,new A.eg(4,A.cD(8),B.zG),k,k,k,B.i,!0,k,k,k,k,new A.eg(4,l,new A.aJ(B.aZ,1,B.v,-1)),k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k,k),d,s,k)],t.p),B.af,B.z,B.D)},
 vM(a,b,c){return this.Ki(a,b,c,1)},
-Kg(a,b,c,d,e){var s=null,r=A.a6I(s,s,B.bi,s,s,!0,s,A.c9(A.b([A.c9(s,A.bt(s,s,B.af,s,s,s,s,s,s,s,s,d?14:16,s,s,B.n,s,s,!0,s,s,s,s,s,s,s,s),a),B.Oz],t.VO),s,s),B.bh,s,s,B.ax,B.aE),q=A.akI(A.K(51,37,37,37),1),p=A.cD(8),o=A.Y(c).i("a8<1,is<u>>")
-return A.cw(A.b([r,B.kl,A.ba(s,A.azK(B.F6,A.bT("Select...",s,s,s,s,A.bt(s,s,A.K(102,37,37,37),s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),!0,A.a7(new A.a8(c,new A.aci(),o),!0,o.i("as.E")),e,new A.acj(),b,t.N),B.l,s,s,new A.bG(s,s,q,p,s,s,B.J),s,s,s,s,s,s,s)],t.p),B.ag,B.z,B.D)}}
+Kg(a,b,c,d,e){var s=null,r=A.a6I(s,s,B.bi,s,s,!0,s,A.c9(A.b([A.c9(s,A.bt(s,s,B.ai,s,s,s,s,s,s,s,s,d?14:16,s,s,B.n,s,s,!0,s,s,s,s,s,s,s,s),a),B.Oz],t.VO),s,s),B.bh,s,s,B.ax,B.aE),q=A.akI(A.K(51,37,37,37),1),p=A.cD(8),o=A.Y(c).i("a8<1,is<u>>")
+return A.cw(A.b([r,B.kl,A.ba(s,A.azK(B.F6,A.bT("Select...",s,s,s,s,A.bt(s,s,A.K(102,37,37,37),s,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s),!0,A.a7(new A.a8(c,new A.aci(),o),!0,o.i("as.E")),e,new A.acj(),b,t.N),B.l,s,s,new A.bG(s,s,q,p,s,s,B.J),s,s,s,s,s,s,s)],t.p),B.af,B.z,B.D)}}
 A.ack.prototype={
 $0(){this.a.as=!0},
 $S:0}
@@ -83652,10 +83652,10 @@ return null},
 $S:488}
 A.Hm.prototype={
 J(a){var s=null,r=" Versa. All rights reserved.",q=t.w,p=A.W(a,s,q).w.a.a<800?20:24,o=A.W(a,s,q).w.a.a<800?20:32,n=t.p
-return A.ba(s,A.ba(s,A.W(a,s,q).w.a.a<800?A.cw(A.b([B.Ng,A.aoT(A.K(B.c.b6(25.5),255,255,255)),B.kl,A.bT("\xa9 "+A.alU(new A.ey(Date.now(),!1))+r,s,s,s,s,A.bt(s,s,A.K(153,255,255,255),s,s,s,s,s,s,s,s,12,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),B.dk,s)],n),B.a2,B.z,B.D):A.cw(A.b([B.Nh,A.aoT(A.K(B.c.b6(25.5),255,255,255)),B.Nf,A.bT("\xa9 "+A.alU(new A.ey(Date.now(),!1))+r,s,s,s,s,A.bt(s,s,A.K(153,255,255,255),s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)],n),B.a2,B.z,B.D),B.l,s,B.i6,s,s,s,s,s,s,s,s),B.l,B.af,s,s,s,s,s,new A.ad(o,p,o,p),s,s,1/0)}}
+return A.ba(s,A.ba(s,A.W(a,s,q).w.a.a<800?A.cw(A.b([B.Ng,A.aoT(A.K(B.c.b6(25.5),255,255,255)),B.kl,A.bT("\xa9 "+A.alU(new A.ey(Date.now(),!1))+r,s,s,s,s,A.bt(s,s,A.K(153,255,255,255),s,s,s,s,s,s,s,s,12,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),B.dk,s)],n),B.a2,B.z,B.D):A.cw(A.b([B.Nh,A.aoT(A.K(B.c.b6(25.5),255,255,255)),B.Nf,A.bT("\xa9 "+A.alU(new A.ey(Date.now(),!1))+r,s,s,s,s,A.bt(s,s,A.K(153,255,255,255),s,s,s,s,s,s,s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s,s)],n),B.a2,B.z,B.D),B.l,s,B.i6,s,s,s,s,s,s,s,s),B.l,B.ai,s,s,s,s,s,new A.ad(o,p,o,p),s,s,1/0)}}
 A.Hz.prototype={
-J(a){var s=null,r=t.w,q=A.W(a,s,r).w.a.a<800?400:500,p=A.b([B.af,A.K(242,37,37,37),A.K(B.c.b6(229.5),37,37,37)],t.t_),o=A.ar_(0,A.jn(A.alL(A.a1N("assets/images/versa_logo.png",B.eR,s,A.W(a,s,r).w.a.a<800?250:350),0.15),s,s)),n=A.W(a,s,r).w.a.a<800?20:32,m=A.bT("Transform Your Business\nWith Our Tailored Software Solutions",s,s,s,s,A.bt(s,s,B.i,s,s,s,s,s,s,s,s,A.W(a,s,r).w.a.a<800?32:48,s,s,B.aT,s,1.2,!0,s,2,s,s,s,s,s,s),B.dk,s),l=t.p
-return A.hB(!1,A.a8x(A.ba(s,A.ox(B.ck,A.b([o,A.jn(new A.cj(new A.ad(n,0,n,0),A.cw(A.b([m,A.be(s,A.W(a,s,r).w.a.a<800?20:30,s),this.a1l(a)],l),B.a2,B.td,B.D),s),s,s)],l),B.a1,B.cf,s),B.l,s,s,new A.bG(B.af,s,s,s,s,new A.qn(B.cl,B.z7,B.dm,p,B.Hl,s),B.J),s,q,s,s,s,s,1/0),this.d,s,!0),this.c)},
+J(a){var s=null,r=t.w,q=A.W(a,s,r).w.a.a<800?400:500,p=A.b([B.ai,A.K(242,37,37,37),A.K(B.c.b6(229.5),37,37,37)],t.t_),o=A.ar_(0,A.jn(A.alL(A.a1N("assets/images/versa_logo.png",B.eR,s,A.W(a,s,r).w.a.a<800?250:350),0.15),s,s)),n=A.W(a,s,r).w.a.a<800?20:32,m=A.bT("Transform Your Business\nWith Our Tailored Software Solutions",s,s,s,s,A.bt(s,s,B.i,s,s,s,s,s,s,s,s,A.W(a,s,r).w.a.a<800?32:48,s,s,B.aT,s,1.2,!0,s,2,s,s,s,s,s,s),B.dk,s),l=t.p
+return A.hB(!1,A.a8x(A.ba(s,A.ox(B.ck,A.b([o,A.jn(new A.cj(new A.ad(n,0,n,0),A.cw(A.b([m,A.be(s,A.W(a,s,r).w.a.a<800?20:30,s),this.a1l(a)],l),B.a2,B.td,B.D),s),s,s)],l),B.a1,B.cf,s),B.l,s,s,new A.bG(B.ai,s,s,s,s,new A.qn(B.cl,B.z7,B.dm,p,B.Hl,s),B.J),s,q,s,s,s,s,1/0),this.d,s,!0),this.c)},
 a1l(a){var s=null,r=t.w,q=A.W(a,s,r).w.a.a<800?30:50,p=A.W(a,s,r).w.a.a<800?16:22
 p=A.al9(s,s,B.aZ,s,s,s,4,s,s,B.i,s,s,new A.ad(q,p,q,p),s,new A.c_(A.cD(12),B.m),s,s,s,s).afu(new A.br(new A.a0C(),t.T))
 return A.apw(A.bT("Get Started",s,s,s,s,A.bt(s,s,B.i,s,s,s,s,s,s,s,s,A.W(a,s,r).w.a.a<800?16:18,s,s,B.ct,s,s,!0,s,s,s,s,s,s,s,s),s,s),new A.a0D(this,a),p)}}
@@ -83669,7 +83669,7 @@ $1(a){if(a.q(0,B.A))return B.lZ
 return null},
 $S:47}
 A.JA.prototype={
-J(a){var s=this,r=null,q="Warehouse Inventory Management",p="In-Office Solutions",o="E-Commerce Website and App",n="Elevate your online presence and drive sales with our tailored E-Commerce Website and App solutions. We create user-friendly platforms that showcase your products beautifully and offer a seamless shopping experience across devices. From intuitive navigation to secure payment gateways, every detail is optimized for performance and customer satisfaction. With integrated analytics and marketing tools, you can easily track performance and adapt strategies to maximize revenue. Take your business global and let your brand thrive in the competitive e-commerce landscape.",m=t.w,l=A.W(a,r,m).w.a.a<800?20:32,k=A.W(a,r,m).w.a.a<800?20:40,j=t.p,i=A.W(a,r,m).w.a.a<800?A.cw(A.b([A.ba(r,B.KF,B.l,r,r,r,r,r,r,B.DT,r,r,1/0),B.yd,s.BC("Streamline your operations and take the guesswork out of inventory tracking with our advanced Warehouse Inventory Management solution. Designed for accuracy and efficiency, it empowers you to manage stock levels, track shipments, and reduce overhead costs in real-time. Whether you're handling small-scale inventory or large-scale logistics, our solution optimizes every aspect of your supply chain, helping you reduce errors, minimize waste, and boost productivity. It\u2019s the ultimate tool to keep your warehouse running like a well-oiled machine.",B.mZ,B.la,"assets/images/inventory_solutions.png",q),B.ce,s.BC("Simplify workplace management and boost productivity with our suite of In-Office Solutions. From an intuitive attendance manager that tracks employee time seamlessly, to a smart calendar that organizes schedules effortlessly, and a task manager that ensures no deadline is missed, our tools are designed to eliminate inefficiencies. By integrating these solutions into your daily operations, you\u2019ll foster better collaboration, improve time management, and focus on what truly matters\u2014growing your business.",B.n0,B.cl,"assets/images/office_solutions.jpg",p),B.ce,s.BC(n,B.mY,B.la,"assets/images/e-commerce.png",o),B.yd,A.be(A.aql(B.Ht,B.iJ,r,B.aq,!1),150,r)],j),B.ag,B.z,B.D):A.dY(A.b([A.dC(new A.cj(B.DQ,A.cw(A.b([B.SN,B.kk,s.BD(q,B.mZ,"Streamline your operations and take the guesswork out of inventory tracking with our advanced Warehouse Inventory Management solution. Designed for accuracy and efficiency, it empowers you to manage stock levels, track shipments, and reduce overhead costs in real-time. Whether you're handling small-scale inventory or large-scale logistics, our solution optimizes every aspect of your supply chain, helping you reduce errors, minimize waste, and boost productivity. It's the ultimate tool to keep your warehouse running like a well-oiled machine."),B.cE,s.BD(p,B.n0,"Simplify workplace management and boost productivity with our suite of In-Office Solutions. From an intuitive attendance manager that tracks employee time seamlessly, to a smart calendar that organizes schedules effortlessly, and a task manager that ensures no deadline is missed, our tools are designed to eliminate inefficiencies. By integrating these solutions into your daily operations, you'll foster better collaboration, improve time management, and focus on what truly matters\u2014growing your business."),B.cE,s.BD(o,B.mY,n)],j),B.ag,B.z,B.D),r),1),A.dC(A.cw(A.b([A.ba(r,r,B.l,r,r,new A.bG(r,B.Dg,r,A.cD(20),r,r,B.J),r,240,r,r,r,r,r),B.cE,A.ba(r,r,B.l,r,r,new A.bG(r,B.Df,r,A.cD(20),r,r,B.J),r,240,r,r,r,r,r),B.cE,A.ba(r,r,B.l,r,r,new A.bG(r,B.De,r,A.cD(20),r,r,B.J),r,240,r,r,r,r,r)],j),B.a2,B.z,B.D),1)],j),B.ag,B.z,B.D)
+J(a){var s=this,r=null,q="Warehouse Inventory Management",p="In-Office Solutions",o="E-Commerce Website and App",n="Elevate your online presence and drive sales with our tailored E-Commerce Website and App solutions. We create user-friendly platforms that showcase your products beautifully and offer a seamless shopping experience across devices. From intuitive navigation to secure payment gateways, every detail is optimized for performance and customer satisfaction. With integrated analytics and marketing tools, you can easily track performance and adapt strategies to maximize revenue. Take your business global and let your brand thrive in the competitive e-commerce landscape.",m=t.w,l=A.W(a,r,m).w.a.a<800?20:32,k=A.W(a,r,m).w.a.a<800?20:40,j=t.p,i=A.W(a,r,m).w.a.a<800?A.cw(A.b([A.ba(r,B.KF,B.l,r,r,r,r,r,r,B.DT,r,r,1/0),B.yd,s.BC("Streamline your operations and take the guesswork out of inventory tracking with our advanced Warehouse Inventory Management solution. Designed for accuracy and efficiency, it empowers you to manage stock levels, track shipments, and reduce overhead costs in real-time. Whether you're handling small-scale inventory or large-scale logistics, our solution optimizes every aspect of your supply chain, helping you reduce errors, minimize waste, and boost productivity. It\u2019s the ultimate tool to keep your warehouse running like a well-oiled machine.",B.mZ,B.la,"assets/images/inventory_solutions.png",q),B.ce,s.BC("Simplify workplace management and boost productivity with our suite of In-Office Solutions. From an intuitive attendance manager that tracks employee time seamlessly, to a smart calendar that organizes schedules effortlessly, and a task manager that ensures no deadline is missed, our tools are designed to eliminate inefficiencies. By integrating these solutions into your daily operations, you\u2019ll foster better collaboration, improve time management, and focus on what truly matters\u2014growing your business.",B.n0,B.cl,"assets/images/office_solutions.jpg",p),B.ce,s.BC(n,B.mY,B.la,"assets/images/e-commerce.png",o),B.yd,A.be(A.aql(B.Ht,B.iJ,r,B.aq,!1),150,r)],j),B.af,B.z,B.D):A.dY(A.b([A.dC(new A.cj(B.DQ,A.cw(A.b([B.SN,B.kk,s.BD(q,B.mZ,"Streamline your operations and take the guesswork out of inventory tracking with our advanced Warehouse Inventory Management solution. Designed for accuracy and efficiency, it empowers you to manage stock levels, track shipments, and reduce overhead costs in real-time. Whether you're handling small-scale inventory or large-scale logistics, our solution optimizes every aspect of your supply chain, helping you reduce errors, minimize waste, and boost productivity. It's the ultimate tool to keep your warehouse running like a well-oiled machine."),B.cE,s.BD(p,B.n0,"Simplify workplace management and boost productivity with our suite of In-Office Solutions. From an intuitive attendance manager that tracks employee time seamlessly, to a smart calendar that organizes schedules effortlessly, and a task manager that ensures no deadline is missed, our tools are designed to eliminate inefficiencies. By integrating these solutions into your daily operations, you'll foster better collaboration, improve time management, and focus on what truly matters\u2014growing your business."),B.cE,s.BD(o,B.mY,n)],j),B.af,B.z,B.D),r),1),A.dC(A.cw(A.b([A.ba(r,r,B.l,r,r,new A.bG(r,B.Dg,r,A.cD(20),r,r,B.J),r,240,r,r,r,r,r),B.cE,A.ba(r,r,B.l,r,r,new A.bG(r,B.Df,r,A.cD(20),r,r,B.J),r,240,r,r,r,r,r),B.cE,A.ba(r,r,B.l,r,r,new A.bG(r,B.De,r,A.cD(20),r,r,B.J),r,240,r,r,r,r,r)],j),B.a2,B.z,B.D),1)],j),B.af,B.z,B.D)
 k=A.b([A.ba(r,i,B.l,r,r,r,r,r,r,new A.ad(0,k,0,k),r,r,r)],j)
 if(!(A.W(a,r,m).w.a.a<800))B.b.L(k,A.b([B.kk,A.am1(new A.cj(B.iJ,A.dY(B.Hu,B.a2,B.z,B.D),r),r,B.aq)],j))
 return A.ba(r,A.cw(k,B.a2,B.z,B.D),B.l,B.i,r,r,r,r,r,new A.ad(l,l,l,l),r,r,r)},
@@ -83677,14 +83677,14 @@ BC(a,b,c,d,e){var s,r,q=null,p=A.cD(16),o=B.c.b6(25.5),n=A.b([new A.b2(0,B.B,A.K
 o=A.K(o,250,95,26)
 s=A.cD(8)
 r=t.p
-return A.ba(q,A.cw(A.b([m,new A.cj(B.mt,A.cw(A.b([A.dY(A.b([A.ba(q,A.wm(b,B.aZ,q,24),B.l,q,q,new A.bG(o,q,q,s,q,q,B.J),q,q,q,B.iK,q,q,q),B.ki,A.dC(A.bT(e,q,q,q,q,B.QZ,q,q),1)],r),B.a2,B.z,B.D),B.kj,A.bT(a,q,B.hx,q,!0,A.bt(q,q,A.K(204,37,37,37),q,q,q,q,q,q,q,q,14,q,q,q,q,1.6,!0,q,q,q,q,q,q,q,q),q,q)],r),B.ag,B.z,B.D),q)],r),B.ag,B.z,B.D),B.l,q,q,new A.bG(B.i,q,q,p,n,q,B.J),q,q,q,q,q,q,q)},
+return A.ba(q,A.cw(A.b([m,new A.cj(B.mt,A.cw(A.b([A.dY(A.b([A.ba(q,A.wm(b,B.aZ,q,24),B.l,q,q,new A.bG(o,q,q,s,q,q,B.J),q,q,q,B.iK,q,q,q),B.ki,A.dC(A.bT(e,q,q,q,q,B.QZ,q,q),1)],r),B.a2,B.z,B.D),B.kj,A.bT(a,q,B.hx,q,!0,A.bt(q,q,A.K(204,37,37,37),q,q,q,q,q,q,q,q,14,q,q,q,q,1.6,!0,q,q,q,q,q,q,q,q),q,q)],r),B.af,B.z,B.D),q)],r),B.af,B.z,B.D),B.l,q,q,new A.bG(B.i,q,q,p,n,q,B.J),q,q,q,q,q,q,q)},
 BD(a,b,c){var s=null,r=A.K(B.c.b6(25.5),250,95,26),q=A.cD(8),p=t.p
-return A.cw(A.b([A.dY(A.b([A.ba(s,A.wm(b,B.aZ,s,s),B.l,s,s,new A.bG(r,s,s,q,s,s,B.J),s,s,s,B.iK,s,s,s),B.ki,A.dC(A.bT(a,s,s,s,s,B.QY,s,s),1)],p),B.a2,B.z,B.D),B.kl,new A.cj(B.E8,A.bT(c,s,B.hx,s,!0,A.bt(s,s,A.K(204,37,37,37),s,s,s,s,s,s,s,s,14,s,s,s,s,1.5,!0,s,s,s,s,s,s,s,s),s,s),s)],p),B.ag,B.z,B.c8)}}
+return A.cw(A.b([A.dY(A.b([A.ba(s,A.wm(b,B.aZ,s,s),B.l,s,s,new A.bG(r,s,s,q,s,s,B.J),s,s,s,B.iK,s,s,s),B.ki,A.dC(A.bT(a,s,s,s,s,B.QY,s,s),1)],p),B.a2,B.z,B.D),B.kl,new A.cj(B.E8,A.bT(c,s,B.hx,s,!0,A.bt(s,s,A.K(204,37,37,37),s,s,s,s,s,s,s,s,14,s,s,s,s,1.5,!0,s,s,s,s,s,s,s,s),s,s),s)],p),B.af,B.z,B.c8)}}
 A.KG.prototype={
 J(a1){var s,r,q,p,o,n,m,l,k,j,i,h=this,g=null,f="Enterprise Solutions\nThat Scale",e="Innovative Solutions\nFor Modern Business",d="In today's digital-first world, a robust online presence is no longer optional\u2014it's the backbone of a thriving business. A well-designed website acts as your 24/7 storefront, showcasing your offerings, building trust, and making it easy for customers to connect with you. Mobile apps take this a step further, offering convenience, personalization, and engagement that keeps your audience coming back for more.",c="But visibility is key, and that's where our digital marketing and Google Ads services come into play. With targeted campaigns and data-driven strategies, we ensure your brand reaches the right audience at the right time. Effective digital marketing builds awareness, drives traffic, and turns clicks into conversions. Structured Google Ads amplify this impact by putting your business at the top of search results when potential customers are actively looking for what you offer.",b=t.w,a=A.W(a1,g,b).w.a.a<800?20:32,a0=A.W(a1,g,b).w.a.a<800?500:530
-if(A.W(a1,g,b).w.a.a<800)s=A.cw(A.b([A.bT(f,g,g,g,g,A.bt(g,g,B.af,g,g,g,g,g,g,g,g,28,g,g,B.aT,g,1.2,!0,g,g,g,g,g,g,g,g),g,g),B.cE,h.jp("At Versa, we don't just deliver solutions - we craft possibilities tailored to your unique needs. Our expertise lies in developing bespoke software solutions that seamlessly align with your business goals.",!0),B.kj,h.jp("But we don't stop at software. Our consultation services guide you every step of the way, ensuring your business not only adapts but thrives in today's fast-paced digital landscape.Need to amplify your online presence? We excel in Social Media Marketing and Digital Marketing strategies that captivate your audience and drive measurable results. From creating a buzz on social platforms to structuring high-performing Google Ads campaigns, we're the catalyst for your brand's growth.",!0),B.ce,A.ba(g,g,B.l,g,g,new A.bG(g,B.mh,g,A.cD(16),g,g,B.J),g,300,g,g,g,g,1/0)],t.p),B.ag,B.z,B.D)
+if(A.W(a1,g,b).w.a.a<800)s=A.cw(A.b([A.bT(f,g,g,g,g,A.bt(g,g,B.ai,g,g,g,g,g,g,g,g,28,g,g,B.aT,g,1.2,!0,g,g,g,g,g,g,g,g),g,g),B.cE,h.jp("At Versa, we don't just deliver solutions - we craft possibilities tailored to your unique needs. Our expertise lies in developing bespoke software solutions that seamlessly align with your business goals.",!0),B.kj,h.jp("But we don't stop at software. Our consultation services guide you every step of the way, ensuring your business not only adapts but thrives in today's fast-paced digital landscape.Need to amplify your online presence? We excel in Social Media Marketing and Digital Marketing strategies that captivate your audience and drive measurable results. From creating a buzz on social platforms to structuring high-performing Google Ads campaigns, we're the catalyst for your brand's growth.",!0),B.ce,A.ba(g,g,B.l,g,g,new A.bG(g,B.mh,g,A.cD(16),g,g,B.J),g,300,g,g,g,g,1/0)],t.p),B.af,B.z,B.D)
 else{s=A.W(a1,g,b).w.a.a<800?16:40
-r=A.bT(f,g,g,g,g,A.bt(g,g,B.af,g,g,g,g,g,g,g,g,A.W(a1,g,b).w.a.a<800?28:40,g,g,B.aT,g,1.2,!0,g,g,g,g,g,g,g,g),g,g)
+r=A.bT(f,g,g,g,g,A.bt(g,g,B.ai,g,g,g,g,g,g,g,g,A.W(a1,g,b).w.a.a<800?28:40,g,g,B.aT,g,1.2,!0,g,g,g,g,g,g,g,g),g,g)
 q=A.be(g,A.W(a1,g,b).w.a.a<800?20:30,g)
 p=h.jp("At Versa, we don't just deliver solutions - we craft possibilities tailored to your unique needs. Our expertise lies in developing bespoke software solutions that seamlessly align with your business goals. Whether you need an intuitive platform to streamline operations or an innovative application to enhance customer engagement, we bring your vision to life with precision and excellence.",A.W(a1,g,b).w.a.a<800)
 A.W(a1,g,b).toString
@@ -83692,16 +83692,16 @@ o=A.be(g,16,g)
 n=h.jp("But we don't stop at software. Our consultation services guide you every step of the way, ensuring your business not only adapts but thrives in today's fast-paced digital landscape. Need to amplify your online presence? We excel in Social Media Marketing and Digital Marketing strategies that captivate your audience and drive measurable results. From creating a buzz on social platforms to structuring high-performing Google Ads campaigns, we're the catalyst for your brand's growth.",A.W(a1,g,b).w.a.a<800)
 A.W(a1,g,b).toString
 m=t.p
-n=A.dC(new A.cj(new A.ad(0,0,s,0),A.cw(A.b([r,q,p,o,n,A.be(g,16,g),h.jp("When you partner with us, you're not just getting a service provider \u2013 you're gaining a team of dedicated experts committed to making your success inevitable. Whatever we do, we excel at it, and we ensure our work speaks volumes about your brand. Let's transform challenges into opportunities and ideas into reality, together.",A.W(a1,g,b).w.a.a<800)],m),B.ag,B.z,B.D),g),1)
+n=A.dC(new A.cj(new A.ad(0,0,s,0),A.cw(A.b([r,q,p,o,n,A.be(g,16,g),h.jp("When you partner with us, you're not just getting a service provider \u2013 you're gaining a team of dedicated experts committed to making your success inevitable. Whatever we do, we excel at it, and we ensure our work speaks volumes about your brand. Let's transform challenges into opportunities and ideas into reality, together.",A.W(a1,g,b).w.a.a<800)],m),B.af,B.z,B.D),g),1)
 s=A.W(a1,g,b).w.a.a<800?300:550
-s=A.dY(A.b([n,A.dC(A.ba(g,g,B.l,g,g,new A.bG(g,B.mh,g,A.cD(A.W(a1,g,b).w.a.a<800?16:20),g,g,B.J),g,s,g,g,g,g,g),1)],m),B.ag,B.z,B.D)}a0=A.ba(g,s,B.l,g,new A.ag(0,1/0,a0,1/0),g,g,g,g,g,g,g,g)
+s=A.dY(A.b([n,A.dC(A.ba(g,g,B.l,g,g,new A.bG(g,B.mh,g,A.cD(A.W(a1,g,b).w.a.a<800?16:20),g,g,B.J),g,s,g,g,g,g,g),1)],m),B.af,B.z,B.D)}a0=A.ba(g,s,B.l,g,new A.ag(0,1/0,a0,1/0),g,g,g,g,g,g,g,g)
 s=A.be(g,A.W(a1,g,b).w.a.a<800?40:60,g)
 A.W(a1,g,b).toString
-if(A.W(a1,g,b).w.a.a<800)r=A.cw(A.b([A.bT(e,g,g,g,g,A.bt(g,g,B.af,g,g,g,g,g,g,g,g,28,g,g,B.aT,g,1.2,!0,g,g,g,g,g,g,g,g),g,g),B.cE,h.jp(d,!0),B.kj,h.jp(c,!0),B.ce,A.ba(g,g,B.l,g,g,new A.bG(g,B.mi,g,A.cD(16),g,g,B.J),g,300,g,g,g,g,1/0)],t.p),B.ag,B.z,B.D)
+if(A.W(a1,g,b).w.a.a<800)r=A.cw(A.b([A.bT(e,g,g,g,g,A.bt(g,g,B.ai,g,g,g,g,g,g,g,g,28,g,g,B.aT,g,1.2,!0,g,g,g,g,g,g,g,g),g,g),B.cE,h.jp(d,!0),B.kj,h.jp(c,!0),B.ce,A.ba(g,g,B.l,g,g,new A.bG(g,B.mi,g,A.cD(16),g,g,B.J),g,300,g,g,g,g,1/0)],t.p),B.af,B.z,B.D)
 else{r=A.W(a1,g,b).w.a.a<800?300:550
 r=A.dC(A.ba(g,g,B.l,g,g,new A.bG(g,B.mi,g,A.cD(A.W(a1,g,b).w.a.a<800?16:20),g,g,B.J),g,r,g,g,g,g,g),1)
 q=A.W(a1,g,b).w.a.a<800?16:40
-p=A.bT(e,g,g,g,g,A.bt(g,g,B.af,g,g,g,g,g,g,g,g,A.W(a1,g,b).w.a.a<800?28:40,g,g,B.aT,g,1.2,!0,g,g,g,g,g,g,g,g),g,g)
+p=A.bT(e,g,g,g,g,A.bt(g,g,B.ai,g,g,g,g,g,g,g,g,A.W(a1,g,b).w.a.a<800?28:40,g,g,B.aT,g,1.2,!0,g,g,g,g,g,g,g,g),g,g)
 o=A.be(g,A.W(a1,g,b).w.a.a<800?20:30,g)
 n=h.jp(d,A.W(a1,g,b).w.a.a<800)
 A.W(a1,g,b).toString
@@ -83709,7 +83709,7 @@ m=A.be(g,16,g)
 l=h.jp(c,A.W(a1,g,b).w.a.a<800)
 A.W(a1,g,b).toString
 k=t.p
-k=A.dY(A.b([r,A.dC(new A.cj(new A.ad(q,0,0,0),A.cw(A.b([p,o,n,m,l,A.be(g,16,g),h.jp("These tools don't just attract more customers\u2014they create measurable opportunities to grow revenue, scale operations, and solidify your position in the market. By combining powerful online platforms with strategic marketing, we help you not just compete, but lead in your industry.",A.W(a1,g,b).w.a.a<800)],k),B.ag,B.z,B.D),g),1)],k),B.ag,B.z,B.D)
+k=A.dY(A.b([r,A.dC(new A.cj(new A.ad(q,0,0,0),A.cw(A.b([p,o,n,m,l,A.be(g,16,g),h.jp("These tools don't just attract more customers\u2014they create measurable opportunities to grow revenue, scale operations, and solidify your position in the market. By combining powerful online platforms with strategic marketing, we help you not just compete, but lead in your industry.",A.W(a1,g,b).w.a.a<800)],k),B.af,B.z,B.D),g),1)],k),B.af,B.z,B.D)
 r=k}r=A.ba(g,r,B.l,g,new A.ag(0,1/0,500,1/0),g,g,g,g,g,g,g,g)
 q=A.be(g,A.W(a1,g,b).w.a.a<800?20:40,g)
 A.W(a1,g,b).toString
@@ -86320,11 +86320,11 @@ B.B_=new A.a4i()
 B.B0=new A.H()
 B.B1=new A.IS()
 B.aI=new A.dw(0,"android")
-B.ah=new A.dw(2,"iOS")
+B.ag=new A.dw(2,"iOS")
 B.bH=new A.dw(4,"macOS")
 B.lB=new A.M4()
 B.lo=new A.Gd()
-B.fJ=new A.cs([B.aI,B.lB,B.ah,B.lo,B.bH,B.lo],A.ai("cs<dw,jV>"))
+B.fJ=new A.cs([B.aI,B.lB,B.ag,B.lo,B.bH,B.lo],A.ai("cs<dw,jV>"))
 B.B2=new A.IU()
 B.B3=new A.J8()
 B.i7=new A.xB()
@@ -86454,7 +86454,7 @@ B.lN=new A.x(4279858898)
 B.ij=new A.x(4280191205)
 B.BX=new A.x(4280361249)
 B.lO=new A.x(4280391411)
-B.af=new A.x(4280624421)
+B.ai=new A.x(4280624421)
 B.lP=new A.x(4281348144)
 B.c0=new A.x(4282532418)
 B.f1=new A.x(4284572001)
@@ -86482,7 +86482,7 @@ B.CN=new A.hu(8,"liveTextInput")
 B.CO=new A.hu(9,"custom")
 B.m9=new A.ii(!1)
 B.ma=new A.ii(!0)
-B.ag=new A.mZ(0,"start")
+B.af=new A.mZ(0,"start")
 B.CP=new A.mZ(1,"end")
 B.a2=new A.mZ(2,"center")
 B.mb=new A.mZ(3,"stretch")
@@ -86970,9 +86970,9 @@ B.al=new A.dR(5,"suffix")
 B.O=new A.dR(6,"prefixIcon")
 B.ac=new A.dR(7,"suffixIcon")
 B.aw=new A.dR(8,"helperError")
-B.ai=new A.dR(9,"counter")
+B.ah=new A.dR(9,"counter")
 B.bX=new A.dR(10,"container")
-B.GK=A.b(s([B.a5,B.ao,B.V,B.av,B.ak,B.al,B.O,B.ac,B.aw,B.ai,B.bX]),A.ai("v<dR>"))
+B.GK=A.b(s([B.a5,B.ao,B.V,B.av,B.ak,B.al,B.O,B.ac,B.aw,B.ah,B.bX]),A.ai("v<dR>"))
 B.GL=A.b(s(["click","scroll"]),t.s)
 B.lK=new A.x(419430400)
 B.f=new A.i(0,0)
@@ -87032,7 +87032,7 @@ B.Hl=A.b(s([0.2,0.5,0.9]),t.v)
 B.cG=new A.dw(1,"fuchsia")
 B.cH=new A.dw(3,"linux")
 B.cI=new A.dw(5,"windows")
-B.Hm=A.b(s([B.aI,B.cG,B.ah,B.cH,B.bH,B.cI]),A.ai("v<dw>"))
+B.Hm=A.b(s([B.aI,B.cG,B.ag,B.cH,B.bH,B.cI]),A.ai("v<dw>"))
 B.jg=A.b(s([!0,!1]),t.HZ)
 B.kG=new A.d0(0,"DoubleQuote")
 B.ds=new A.d0(1,"SingleQuote")
@@ -88090,7 +88090,7 @@ B.tB=new A.nY(1,null)
 B.fW=new A.IR(0,"portrait")
 B.fX=new A.IR(1,"landscape")
 B.KE=new A.xx(null)
-B.Qc=new A.l(!0,B.af,null,null,null,null,32,B.aT,null,null,null,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.Qc=new A.l(!0,B.ai,null,null,null,null,32,B.aT,null,null,null,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.SQ=new A.iV("Transformative Digital\nSolutions",null,B.Qc,null,null,null,null,null,null,null)
 B.KF=new A.cj(B.iJ,B.SQ,null)
 B.b2=new A.Jd(0,"fill")
@@ -88284,7 +88284,7 @@ B.Mr=new A.hR("_InputDecoratorState.suffix")
 B.k7=new A.z1(0,"idle")
 B.Ms=new A.z1(1,"updating")
 B.Mt=new A.z1(2,"postUpdate")
-B.Mu=new A.dM([B.aI,B.ah,B.cG],A.ai("dM<dw>"))
+B.Mu=new A.dM([B.aI,B.ag,B.cG],A.ai("dM<dw>"))
 B.xL=new A.dM([B.aH,B.bf,B.cb,B.aV,B.bF],t.Lu)
 B.Mv=new A.dM([B.A],t.b4)
 B.JR={click:0,keyup:1,keydown:2,mouseup:3,mousedown:4,pointerdown:5,pointerup:6}
@@ -88508,8 +88508,8 @@ B.Pb=new A.l(!0,B.BP,null,"monospace",null,null,48,B.mR,null,null,null,null,null
 B.yv=new A.l(!0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,B.yq,null,null,null,null,null,null,null,null)
 B.yx=new A.l(!1,null,null,null,null,null,14,B.n,null,-0.15,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.QQ=new A.l(!1,null,null,null,null,null,15,B.n,null,-0.15,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.QY=new A.l(!0,B.af,null,null,null,null,18,B.P,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.QZ=new A.l(!0,B.af,null,null,null,null,18,B.ct,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.QY=new A.l(!0,B.ai,null,null,null,null,18,B.P,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.QZ=new A.l(!0,B.ai,null,null,null,null,18,B.ct,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.Rw=new A.l(!0,null,null,null,null,null,null,B.n,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.ku=new A.l(!0,null,null,null,null,null,null,B.aT,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.Rx=new A.l(!0,null,null,null,null,null,16,B.P,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -88771,7 +88771,7 @@ B.RV=new A.l(!0,B.i,null,"Roboto",null,null,null,null,null,null,null,null,null,n
 B.RN=new A.l(!0,B.i,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.e,null,null,null,"whiteMountainView labelMedium",null,null,null,null)
 B.Rn=new A.l(!0,B.i,null,"Roboto",null,null,null,null,null,null,null,null,null,null,null,null,null,B.e,null,null,null,"whiteMountainView labelSmall",null,null,null,null)
 B.SM=new A.dh(B.R6,B.Sp,B.S4,B.Px,B.RY,B.R0,B.Su,B.Q6,B.QD,B.RR,B.Po,B.S6,B.RV,B.RN,B.Rn)
-B.yw=new A.l(!0,B.af,null,null,null,null,40,B.aT,null,null,null,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.yw=new A.l(!0,B.ai,null,null,null,null,40,B.aT,null,null,null,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.SN=new A.iV("Transformative \nDigital Solutions",null,B.yw,null,null,null,null,null,null,null)
 B.SR=new A.iV("About Us",null,B.yw,null,null,null,null,null,null,null)
 B.W6=new A.aah(0,"system")
@@ -89375,7 +89375,7 @@ s($,"aL_","awm",()=>A.fB(0.75,1,t.i))
 s($,"aL0","awn",()=>A.eR(B.ST))
 s($,"aJL","avD",()=>A.eR(B.b_))
 s($,"aJM","avE",()=>A.eR(B.Fa))
-r($,"aKp","avW",()=>new A.aa2(new A.aa4(),A.aY()===B.ah))
+r($,"aKp","avW",()=>new A.aa2(new A.aa4(),A.aY()===B.ag))
 s($,"aLh","awB",()=>{var q=t.i
 return A.b([A.as8(A.fB(0,0.4,q).i_(A.eR(B.CR)),0.166666,q),A.as8(A.fB(0.4,1,q).i_(A.eR(B.CV)),0.833334,q)],A.ai("v<rR<M>>"))})
 s($,"aLg","UM",()=>A.aDD($.awB(),t.i))
@@ -89583,8 +89583,8 @@ s($,"aKm","EK",()=>new A.aaE(A.cc("/",!0,!1),A.cc("(^[a-zA-Z][-+.a-zA-Z\\d]*://|
 s($,"aKk","anJ",()=>A.aD1())
 s($,"aJ8","avn",()=>{var q=null
 return A.al9(q,q,B.aZ,q,q,q,2,q,q,B.i,q,q,B.E4,q,A.aCg(A.cD(8),B.m),q,q,q,q)})
-s($,"aJ9","avo",()=>{var q=null,p=A.bt(q,q,B.af,q,q,q,q,q,q,q,q,32,q,q,B.aT,q,q,!0,q,q,q,q,q,q,q,q),o=A.bt(q,q,B.af,q,q,q,q,q,q,q,q,28,q,q,B.ct,q,q,!0,q,q,q,q,q,q,q,q)
-return A.aab(q,q,q,A.bt(q,q,B.af,q,q,q,q,q,q,q,q,16,q,q,B.n,q,q,!0,q,q,q,q,q,q,q,q),A.bt(q,q,B.af,q,q,q,q,q,q,q,q,14,q,q,B.n,q,q,!0,q,q,q,q,q,q,q,q),q,q,q,p,o,q,q,q,q,q,q,q,q,q)})
+s($,"aJ9","avo",()=>{var q=null,p=A.bt(q,q,B.ai,q,q,q,q,q,q,q,q,32,q,q,B.aT,q,q,!0,q,q,q,q,q,q,q,q),o=A.bt(q,q,B.ai,q,q,q,q,q,q,q,q,28,q,q,B.ct,q,q,!0,q,q,q,q,q,q,q,q)
+return A.aab(q,q,q,A.bt(q,q,B.ai,q,q,q,q,q,q,q,q,16,q,q,B.n,q,q,!0,q,q,q,q,q,q,q,q),A.bt(q,q,B.ai,q,q,q,q,q,q,q,q,14,q,q,B.n,q,q,!0,q,q,q,q,q,q,q,q),q,q,q,p,o,q,q,q,q,q,q,q,q,q)})
 r($,"aJa","avp",()=>{var q=$.avo()
 return A.zQ(null,A.azT($.avn()),A.aAz(A.aqN(A.cD(8),A.aon(B.lZ,-1,B.v,1.5),4),B.i,!0,A.aqN(A.cD(8),A.aon(B.aZ,-1,B.v,2),4)),B.aZ,B.i,q,null)})})();(function nativeSupport(){!function(){var s=function(a){var m={}
 m[a]=1
