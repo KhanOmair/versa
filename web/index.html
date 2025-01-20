@@ -25,7 +25,7 @@
     const serviceWorkerVersion = null;
   </script>
   <!-- This script adds the flutter initialization JS code -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="flutter.js" defer></script>
 
   <!-- Add these viewport and scrolling optimization meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -57,17 +57,63 @@
   <div id="flutter-content">
     <script>
       window.addEventListener('load', function(ev) {
+        // Initialize Flutter's script loader
+        _flutter = {};
+        var serviceWorkerActivated = false;
+        
         // Download main.dart.js
-        _flutter.loader.loadEntrypoint({
-          serviceWorker: {
-            serviceWorkerVersion: serviceWorkerVersion,
-          },
-          onEntrypointLoaded: function(engineInitializer) {
-            engineInitializer.initializeEngine().then(function(appRunner) {
-              appRunner.runApp();
-            });
+        var scriptLoaded = false;
+        function loadMainDartJs() {
+          if (scriptLoaded) {
+            return;
           }
-        });
+          scriptLoaded = true;
+          var scriptTag = document.createElement('script');
+          scriptTag.src = 'main.dart.js';
+          scriptTag.type = 'application/javascript';
+          document.body.append(scriptTag);
+        }
+
+        // Check if service worker is ready
+        function waitForServiceWorkerActivation(registration) {
+          serviceWorkerActivated = true;
+          loadMainDartJs();
+        }
+
+        if ('serviceWorker' in navigator) {
+          // Service worker URL (as provided by flutter build)
+          var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+          
+          navigator.serviceWorker.register(serviceWorkerUrl)
+            .then((reg) => {
+              if (!reg.active && (reg.installing || reg.waiting)) {
+                // No active web worker and we have installed or are installing one
+                reg.installing || reg.waiting.addEventListener('statechange', function() {
+                  if (this.state == 'activated') {
+                    waitForServiceWorkerActivation(reg);
+                  }
+                });
+              } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+                // When the app updates the serviceWorkerVersion changes, so we
+                // need to ask the service worker to update.
+                reg.update();
+                waitForServiceWorkerActivation(reg);
+              } else {
+                // Existing service worker is still good.
+                loadMainDartJs();
+              }
+            });
+
+          // If service worker doesn't succeed in a reasonable amount of time,
+          // fallback to plaint <script> tag.
+          setTimeout(() => {
+            if (!serviceWorkerActivated) {
+              loadMainDartJs();
+            }
+          }, 4000);
+        } else {
+          loadMainDartJs();
+        }
       });
     </script>
   </div>
