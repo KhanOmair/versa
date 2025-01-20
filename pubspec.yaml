@@ -97,4 +97,5 @@ flutter:
   assets:
     - assets/images/
     - web/favicon.png
+    - web/CNAME
 
