@@ -139,218 +139,443 @@ class _ContactSectionState extends State<ContactSection> {
       color: AppTheme.primaryDark,
       child: Container(
         constraints: const BoxConstraints(maxWidth: 1200),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Left side - Text content
-            Expanded(
-              flex: 2,
-              child: Column(
+        child: isMobile(context)
+            ? Column(
+                // Mobile layout: Stack vertically
+                children: [
+                  // Text content
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Center(
+                        child: Text(
+                          'Talk with our sales team',
+                          style: TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.w600,
+                            height: 1.2,
+                            color: AppTheme.primaryLight,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      Center(
+                        child: Text(
+                          'Fill out your information below and a Versa representative will reach out to you.',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: AppTheme.primaryLight.withOpacity(0.8),
+                            height: 1.5,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      // Bullet points
+                      _buildBulletPoint(
+                        'Custom Software Development',
+                        'Tailored solutions for your unique business needs',
+                        true,
+                      ),
+                      const SizedBox(height: 12),
+                      _buildBulletPoint(
+                        'Cloud Infrastructure',
+                        'Scalable and secure cloud solutions',
+                        true,
+                      ),
+                      const SizedBox(height: 12),
+                      _buildBulletPoint(
+                        'Digital Transformation',
+                        'Modernize your business processes',
+                        true,
+                      ),
+                      const SizedBox(height: 12),
+                      _buildBulletPoint(
+                        'Technical Consultation',
+                        'Expert guidance for your tech decisions',
+                        true,
+                      ),
+                      const SizedBox(height: 12),
+                      _buildBulletPoint(
+                        'Enterprise Solutions',
+                        'Comprehensive solutions for large organizations',
+                        true,
+                      ),
+                      const SizedBox(height: 12),
+                      _buildBulletPoint(
+                        '24/7 Support',
+                        'Round-the-clock technical assistance',
+                        true,
+                      ),
+                      const SizedBox(height: 24),
+                      InkWell(
+                        onTap: () {},
+                        child: Text(
+                          'You can also reach us at sales@versahq.online or give us a call at\n+1 (602) 838-0848',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: AppTheme.primaryLight,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 32), // Space between content and form
+                  // Contact form
+                  Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: AppTheme.primaryLight,
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 10,
+                          offset: const Offset(0, 5),
+                        ),
+                      ],
+                    ),
+                    child: Form(
+                      key: _formKey,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: _buildTextField(
+                                  'First Name',
+                                  _firstNameController,
+                                  true,
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: _buildTextField(
+                                  'Last Name',
+                                  _lastNameController,
+                                  true,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 12),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: _buildTextField(
+                                  'Company Email',
+                                  _emailController,
+                                  true,
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: _buildTextField(
+                                  'Phone Number',
+                                  _phoneController,
+                                  true,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 12),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: _buildDropdown(
+                                  'Company Size',
+                                  _selectedCompanySize,
+                                  _companySizes,
+                                  true,
+                                  (String? value) {
+                                    setState(() {
+                                      _selectedCompanySize = value;
+                                    });
+                                  },
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: _buildDropdown(
+                                  'Country',
+                                  _selectedCountry,
+                                  _countries,
+                                  true,
+                                  (String? value) {
+                                    setState(() {
+                                      _selectedCountry = value;
+                                    });
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 12),
+                          _buildTextField(
+                            'What would you like to discuss?',
+                            _messageController,
+                            true,
+                            maxLines: 3,
+                          ),
+                          const SizedBox(height: 16),
+                          SizedBox(
+                            width: double.infinity,
+                            child: ElevatedButton(
+                              onPressed: _isLoading ? null : _submitForm,
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: AppTheme.accent,
+                                foregroundColor: AppTheme.primaryLight,
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 16,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                              child: _isLoading
+                                  ? const CircularProgressIndicator(
+                                      color: AppTheme.primaryLight)
+                                  : const Text(
+                                      'Submit',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            : Row(
+                // Desktop layout: Side by side
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Talk with our sales\nteam',
-                    style: TextStyle(
-                      fontSize: isMobile(context) ? 28 : 40,
-                      fontWeight: FontWeight.w600,
-                      height: 1.2,
-                      color: AppTheme.primaryLight,
+                  // Left side - Text content
+                  Expanded(
+                    flex: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Talk with our sales\nteam',
+                          style: TextStyle(
+                            fontSize: 40,
+                            fontWeight: FontWeight.w600,
+                            height: 1.2,
+                            color: AppTheme.primaryLight,
+                          ),
+                        ),
+                        SizedBox(height: 16),
+                        Text(
+                          'Fill out your information and a Versa\nrepresentative will reach out to you.',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: AppTheme.primaryLight.withOpacity(0.8),
+                            height: 1.5,
+                          ),
+                        ),
+                        SizedBox(height: 24),
+                        // Bullet points with adjusted spacing
+                        _buildBulletPoint(
+                          'Custom Software Development',
+                          'Tailored solutions for your unique business needs',
+                          false,
+                        ),
+                        SizedBox(height: 16),
+                        _buildBulletPoint(
+                          'Cloud Infrastructure',
+                          'Scalable and secure cloud solutions',
+                          false,
+                        ),
+                        SizedBox(height: 16),
+                        _buildBulletPoint(
+                          'Digital Transformation',
+                          'Modernize your business processes',
+                          false,
+                        ),
+                        SizedBox(height: 16),
+                        _buildBulletPoint(
+                          'Technical Consultation',
+                          'Expert guidance for your tech decisions',
+                          false,
+                        ),
+                        SizedBox(height: 16),
+                        _buildBulletPoint(
+                          'Enterprise Solutions',
+                          'Comprehensive solutions for large organizations',
+                          false,
+                        ),
+                        SizedBox(height: 16),
+                        _buildBulletPoint(
+                          '24/7 Support',
+                          'Round-the-clock technical assistance',
+                          false,
+                        ),
+                        // SizedBox(height: 30),
+                        // InkWell(
+                        //   onTap: () {},
+                        //   child: Text(
+                        //     'You can also reach us at sales@versahq.online or\ngive us a call at +1 (602) 838-0848',
+                        //     style: TextStyle(
+                        //       fontSize: 18,
+                        //       color: AppTheme.primaryLight,
+                        //     ),
+                        //   ),
+                        // ),
+                      ],
                     ),
                   ),
-                  SizedBox(height: isMobile(context) ? 12 : 16),
-                  Text(
-                    'Fill out your information and a Versa\nrepresentative will reach out to you.',
-                    style: TextStyle(
-                      fontSize: isMobile(context) ? 12 : 16,
-                      color: AppTheme.primaryLight.withOpacity(0.8),
-                      height: 1.5,
-                    ),
-                  ),
-                  SizedBox(height: isMobile(context) ? 16 : 24),
-                  // Bullet points with adjusted spacing
-                  _buildBulletPoint(
-                    'Custom Software Development',
-                    'Tailored solutions for your unique business needs',
-                    isMobile(context),
-                  ),
-                  SizedBox(height: isMobile(context) ? 12 : 16),
-                  _buildBulletPoint(
-                    'Cloud Infrastructure',
-                    'Scalable and secure cloud solutions',
-                    isMobile(context),
-                  ),
-                  SizedBox(height: isMobile(context) ? 12 : 16),
-                  _buildBulletPoint(
-                    'Digital Transformation',
-                    'Modernize your business processes',
-                    isMobile(context),
-                  ),
-                  SizedBox(height: isMobile(context) ? 12 : 16),
-                  _buildBulletPoint(
-                    'Technical Consultation',
-                    'Expert guidance for your tech decisions',
-                    isMobile(context),
-                  ),
-                  SizedBox(height: isMobile(context) ? 12 : 16),
-                  _buildBulletPoint(
-                    'Enterprise Solutions',
-                    'Comprehensive solutions for large organizations',
-                    isMobile(context),
-                  ),
-                  SizedBox(height: isMobile(context) ? 12 : 16),
-                  _buildBulletPoint(
-                    '24/7 Support',
-                    'Round-the-clock technical assistance',
-                    isMobile(context),
-                  ),
-                  SizedBox(height: isMobile(context) ? 24 : 30),
-                  InkWell(
-                    onTap: () {},
-                    child: Text(
-                      'You can also reach us at sales@versahq.online or\ngive us a call at +1 (602) 838-0848',
-                      style: TextStyle(
-                        fontSize: isMobile(context) ? 14 : 18,
+                  SizedBox(width: 40),
+                  // Right side - Form
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      padding: EdgeInsets.all(24),
+                      decoration: BoxDecoration(
                         color: AppTheme.primaryLight,
+                        borderRadius: BorderRadius.circular(12),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.1),
+                            blurRadius: 10,
+                            offset: const Offset(0, 5),
+                          ),
+                        ],
+                      ),
+                      child: Form(
+                        key: _formKey,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: _buildTextField(
+                                    'First Name',
+                                    _firstNameController,
+                                    false,
+                                  ),
+                                ),
+                                SizedBox(width: 16),
+                                Expanded(
+                                  child: _buildTextField(
+                                    'Last Name',
+                                    _lastNameController,
+                                    false,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 16),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: _buildTextField(
+                                    'Company Email',
+                                    _emailController,
+                                    false,
+                                  ),
+                                ),
+                                SizedBox(width: 16),
+                                Expanded(
+                                  child: _buildTextField(
+                                    'Phone Number',
+                                    _phoneController,
+                                    false,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 16),
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: _buildDropdown(
+                                    'Company Size',
+                                    _selectedCompanySize,
+                                    _companySizes,
+                                    false,
+                                    (String? value) {
+                                      setState(() {
+                                        _selectedCompanySize = value;
+                                      });
+                                    },
+                                  ),
+                                ),
+                                SizedBox(width: 16),
+                                Expanded(
+                                  child: _buildDropdown(
+                                    'Country',
+                                    _selectedCountry,
+                                    _countries,
+                                    false,
+                                    (String? value) {
+                                      setState(() {
+                                        _selectedCountry = value;
+                                      });
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 16),
+                            _buildTextField(
+                              'What would you like to discuss?',
+                              _messageController,
+                              false,
+                              maxLines: 3,
+                            ),
+                            SizedBox(height: 24),
+                            SizedBox(
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                onPressed: _isLoading ? null : _submitForm,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppTheme.accent,
+                                  foregroundColor: AppTheme.primaryLight,
+                                  padding: EdgeInsets.symmetric(
+                                    vertical: 20,
+                                  ),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                                child: _isLoading
+                                    ? const CircularProgressIndicator(
+                                        color: AppTheme.primaryLight)
+                                    : Text(
+                                        'Submit',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                              ),
+                            ),
+                            SizedBox(height: 20),
+                            Center(
+                              child: InkWell(
+                                onTap: () {},
+                                child: Text(
+                                  'You can also reach us at sales@versahq.online or give us a call at +1 (602) 838-0848',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: AppTheme.primaryDark,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ],
               ),
-            ),
-            SizedBox(width: isMobile(context) ? 20 : 40),
-            // Right side - Form
-            Expanded(
-              flex: 3,
-              child: Container(
-                padding: EdgeInsets.all(isMobile(context) ? 16 : 24),
-                decoration: BoxDecoration(
-                  color: AppTheme.primaryLight,
-                  borderRadius: BorderRadius.circular(12),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      blurRadius: 10,
-                      offset: const Offset(0, 5),
-                    ),
-                  ],
-                ),
-                child: Form(
-                  key: _formKey,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: _buildTextField(
-                              'First Name',
-                              _firstNameController,
-                              isMobile(context),
-                            ),
-                          ),
-                          SizedBox(width: isMobile(context) ? 12 : 16),
-                          Expanded(
-                            child: _buildTextField(
-                              'Last Name',
-                              _lastNameController,
-                              isMobile(context),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: isMobile(context) ? 12 : 16),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: _buildTextField(
-                              'Company Email',
-                              _emailController,
-                              isMobile(context),
-                            ),
-                          ),
-                          SizedBox(width: isMobile(context) ? 12 : 16),
-                          Expanded(
-                            child: _buildTextField(
-                              'Phone Number',
-                              _phoneController,
-                              isMobile(context),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: isMobile(context) ? 12 : 16),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: _buildDropdown(
-                              'Company Size',
-                              _selectedCompanySize,
-                              _companySizes,
-                              isMobile(context),
-                              (String? value) {
-                                setState(() {
-                                  _selectedCompanySize = value;
-                                });
-                              },
-                            ),
-                          ),
-                          SizedBox(width: isMobile(context) ? 12 : 16),
-                          Expanded(
-                            child: _buildDropdown(
-                              'Country',
-                              _selectedCountry,
-                              _countries,
-                              isMobile(context),
-                              (String? value) {
-                                setState(() {
-                                  _selectedCountry = value;
-                                });
-                              },
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: isMobile(context) ? 12 : 16),
-                      _buildTextField(
-                        'What would you like to discuss?',
-                        _messageController,
-                        isMobile(context),
-                        maxLines: 3,
-                      ),
-                      SizedBox(height: isMobile(context) ? 16 : 24),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: _isLoading ? null : _submitForm,
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppTheme.accent,
-                            foregroundColor: AppTheme.primaryLight,
-                            padding: EdgeInsets.symmetric(
-                              vertical: isMobile(context) ? 16 : 20,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                          ),
-                          child: _isLoading
-                              ? const CircularProgressIndicator(
-                                  color: AppTheme.primaryLight)
-                              : Text(
-                                  'Submit',
-                                  style: TextStyle(
-                                    fontSize: isMobile(context) ? 14 : 16,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }
