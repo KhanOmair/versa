@@ -11,7 +11,7 @@
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="versa_web">
+  <meta name="apple-mobile-web-app-title" content="Versa">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
@@ -24,31 +24,34 @@
     // The value below is injected by flutter build, do not touch.
     const serviceWorkerVersion = null;
   </script>
-  <!-- This script adds the flutter initialization JS code -->
+  <!-- This script adds the Flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 
-  <!-- Add these viewport and scrolling optimization meta tags -->
+  <!-- Add optimized viewport and scrolling meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <!-- Add CSS for smooth scrolling -->
+  <!-- Add CSS for smooth scrolling and touch gesture optimization -->
   <style>
     html {
       scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
+      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling for iOS */
+      height: 100%;
     }
     body {
-      overscroll-behavior-y: contain;
-      position: fixed;
-      width: 100%;
+      margin: 0;
       height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overscroll-behavior: contain; /* Prevent bounce effects */
+      -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
       overflow: hidden;
+      background-color: #FFFFFF; /* Match your app's background color */
     }
     #flutter-content {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling */
     }
   </style>
 </head>
@@ -88,7 +91,7 @@
             .then((reg) => {
               if (!reg.active && (reg.installing || reg.waiting)) {
                 // No active web worker and we have installed or are installing one
-                reg.installing || reg.waiting.addEventListener('statechange', function() {
+                (reg.installing || reg.waiting).addEventListener('statechange', function() {
                   if (this.state == 'activated') {
                     waitForServiceWorkerActivation(reg);
                   }
@@ -105,7 +108,7 @@
             });
 
           // If service worker doesn't succeed in a reasonable amount of time,
-          // fallback to plaint <script> tag.
+          // fallback to plain <script> tag.
           setTimeout(() => {
             if (!serviceWorkerActivated) {
               loadMainDartJs();
