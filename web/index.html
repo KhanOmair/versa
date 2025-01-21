@@ -33,8 +33,8 @@
   <!-- Add CSS for smooth scrolling and touch gesture optimization -->
   <style>
     html {
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling for iOS */
+      scroll-behavior: smooth; /* Enables smooth scrolling for all browsers */
+      -webkit-overflow-scrolling: touch; /* Enables smooth scrolling for iOS */
       height: 100%;
     }
     body {
@@ -43,15 +43,19 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      overscroll-behavior: contain; /* Prevent bounce effects */
+      overscroll-behavior: contain; /* Prevents bounce effects on iOS */
       -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
       overflow: hidden;
       background-color: #FFFFFF; /* Match your app's background color */
     }
     #flutter-content {
       flex: 1;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch; /* Enable smooth scrolling */
+      overflow-y: auto; /* Ensures scrolling works */
+      -webkit-overflow-scrolling: touch; /* Enables smooth scrolling for iOS */
+    }
+    /* Force hardware acceleration for smoother rendering on iOS */
+    #flutter-content {
+      transform: translateZ(0);
     }
   </style>
 </head>
@@ -63,7 +67,7 @@
         // Initialize Flutter's script loader
         _flutter = {};
         var serviceWorkerActivated = false;
-        
+
         // Download main.dart.js
         var scriptLoaded = false;
         function loadMainDartJs() {
@@ -92,12 +96,12 @@
               if (!reg.active && (reg.installing || reg.waiting)) {
                 // No active web worker and we have installed or are installing one
                 (reg.installing || reg.waiting).addEventListener('statechange', function() {
-                  if (this.state == 'activated') {
+                  if (this.state === 'activated') {
                     waitForServiceWorkerActivation(reg);
                   }
                 });
               } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-                // When the app updates the serviceWorkerVersion changes, so we
+                // When the app updates, the serviceWorkerVersion changes, so we
                 // need to ask the service worker to update.
                 reg.update();
                 waitForServiceWorkerActivation(reg);
