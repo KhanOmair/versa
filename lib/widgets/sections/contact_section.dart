@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:versa_web/config/app_config.dart';
 import 'package:versa_web/utils/app_theme.dart';
 import 'dart:convert';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactSection extends StatefulWidget {
   const ContactSection({super.key});
@@ -207,13 +208,37 @@ class _ContactSectionState extends State<ContactSection> {
                         true,
                       ),
                       const SizedBox(height: 24),
-                      InkWell(
-                        onTap: () {},
-                        child: Text(
-                          'You can also reach us at sales@versahq.online or give us a call at\n+1 (602) 838-0848',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: AppTheme.primaryLight,
+                      Center(
+                        child: InkWell(
+                          onTap: () {},
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                'You can also reach us at sales@versahq.online or call at',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: AppTheme.primaryLight,
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  launchUrl(Uri.parse(
+                                      'tel:+16028380848')); // Ensure you have the launch method available
+                                },
+                                child: Text(
+                                  '+1 (602) 838-0848',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: AppTheme.accent.withOpacity(0.8),
+                                    decoration: TextDecoration
+                                        .underline, // Optional: underline for clarity
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
