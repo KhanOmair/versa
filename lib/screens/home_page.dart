@@ -7,6 +7,7 @@ import '../widgets/sections/services_section.dart';
 import '../widgets/sections/contact_section.dart';
 import '../widgets/sections/footer_section.dart';
 import '../utils/app_theme.dart';
+import 'dart:html' as html;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -231,6 +232,18 @@ class HomePageState extends State<HomePage>
         fit: BoxFit.contain,
       ),
       centerTitle: true,
+      actions: [
+        // Add AR Scanner button for mobile
+        IconButton(
+          icon: const Icon(Icons.qr_code_scanner),
+          color: AppTheme.primaryLight,
+          tooltip: 'AR Scanner',
+          onPressed: () {
+            // Open AR scanner in new tab
+            html.window.open('arDemo.html', 'AR Experience');
+          },
+        ),
+      ],
     );
   }
 
@@ -264,6 +277,16 @@ class HomePageState extends State<HomePage>
             () => scrollToSection(servicesKey, 'services'), 'services'),
         _buildNavButton('Contact Us',
             () => scrollToSection(contactKey, 'contact'), 'contact'),
+        IconButton(
+          icon: const Icon(Icons.qr_code_scanner),
+          color: AppTheme.primaryLight,
+          tooltip: 'AR Scanner',
+          onPressed: () {
+            // Open AR scanner in new tab
+            html.window.open('arDemo.html', 'AR Experience');
+          },
+        ),
+        const SizedBox(width: 16),
       ],
     );
   }

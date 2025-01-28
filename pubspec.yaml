@@ -40,6 +40,7 @@ dependencies:
   http: ^1.1.0  # For making HTTP requests
   mailer: ^6.0.1  # For sending emails
   flutter_dotenv: ^5.0.2
+  js: ^0.6.3
 
 dev_dependencies:
   flutter_test:
