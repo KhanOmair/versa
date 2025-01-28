@@ -240,7 +240,7 @@ class HomePageState extends State<HomePage>
           tooltip: 'AR Scanner',
           onPressed: () {
             // Open AR scanner in new tab
-            html.window.open('ar.html', 'AR Experience');
+            html.window.open('arDemo.html', 'AR Experience');
           },
         ),
       ],
@@ -283,7 +283,7 @@ class HomePageState extends State<HomePage>
           tooltip: 'AR Scanner',
           onPressed: () {
             // Open AR scanner in new tab
-            html.window.open('ar.html', 'AR Experience');
+            html.window.open('arDemo.html', 'AR Experience');
           },
         ),
         const SizedBox(width: 16),
