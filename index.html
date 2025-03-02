@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Change base href to / since we're using a custom domain -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Versa - Custom Software Solutions">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Versa">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Versa</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "2604141287";
+  </script>
+  <!-- This script adds the Flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+
+  <!-- Add optimized viewport and scrolling meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Add CSS for smooth scrolling and touch gesture optimization -->
+  <style>
+    html {
+      scroll-behavior: smooth; /* Enables smooth scrolling for all browsers */
+      -webkit-overflow-scrolling: touch; /* Enables smooth scrolling for iOS */
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overscroll-behavior: contain; /* Prevents bounce effects on iOS */
+      -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
+      overflow: hidden;
+      background-color: #FFFFFF; /* Match your app's background color */
+    }
+    #flutter-content {
+      flex: 1;
+      overflow-y: auto; /* Ensures scrolling works */
+      -webkit-overflow-scrolling: touch; /* Enables smooth scrolling for iOS */
+    }
+    /* Force hardware acceleration for smoother rendering on iOS */
+    #flutter-content {
+      transform: translateZ(0);
+    }
+  </style>
+</head>
+<body>
+  <script src="scripts/qr_worker.js"></script>
+  <!-- Add a container for Flutter content -->
+  <div id="flutter-content">
+    <script>
+      window.addEventListener('load', function(ev) {
+        // Initialize Flutter's script loader
+        _flutter = {};
+        var serviceWorkerActivated = false;
+
+        // Download main.dart.js
+        var scriptLoaded = false;
+        function loadMainDartJs() {
+          if (scriptLoaded) {
+            return;
+          }
+          scriptLoaded = true;
+          var scriptTag = document.createElement('script');
+          scriptTag.src = 'main.dart.js';
+          scriptTag.type = 'application/javascript';
+          document.body.append(scriptTag);
+        }
+
+        // Check if service worker is ready
+        function waitForServiceWorkerActivation(registration) {
+          serviceWorkerActivated = true;
+          loadMainDartJs();
+        }
+
+        if ('serviceWorker' in navigator) {
+          // Service worker URL (as provided by flutter build)
+          var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+          
+          navigator.serviceWorker.register(serviceWorkerUrl)
+            .then((reg) => {
+              if (!reg.active && (reg.installing || reg.waiting)) {
+                // No active web worker and we have installed or are installing one
+                (reg.installing || reg.waiting).addEventListener('statechange', function() {
+                  if (this.state === 'activated') {
+                    waitForServiceWorkerActivation(reg);
+                  }
+                });
+              } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+                // When the app updates, the serviceWorkerVersion changes, so we
+                // need to ask the service worker to update.
+                reg.update();
+                waitForServiceWorkerActivation(reg);
+              } else {
+                // Existing service worker is still good.
+                loadMainDartJs();
+              }
+            });
+
+          // If service worker doesn't succeed in a reasonable amount of time,
+          // fallback to plain <script> tag.
+          setTimeout(() => {
+            if (!serviceWorkerActivated) {
+              loadMainDartJs();
+            }
+          }, 4000);
+        } else {
+          loadMainDartJs();
+        }
+      });
+    </script>
+  </div>
+</body>
+</html>
