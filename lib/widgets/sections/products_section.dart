@@ -70,7 +70,7 @@ class ProductsSection extends StatelessWidget {
           width: double.infinity,
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: Text(
+            child: SelectableText(
               'Transformative Digital\nSolutions',
               style: TextStyle(
                 fontSize: 32,
@@ -88,7 +88,7 @@ class ProductsSection extends StatelessWidget {
           title: 'Warehouse Inventory Management',
           icon: Icons.local_shipping,
           description:
-              'Streamline your operations and take the guesswork out of inventory tracking with our advanced Warehouse Inventory Management solution. Designed for accuracy and efficiency, it empowers you to manage stock levels, track shipments, and reduce overhead costs in real-time. Whether you\'re handling small-scale inventory or large-scale logistics, our solution optimizes every aspect of your supply chain, helping you reduce errors, minimize waste, and boost productivity. It’s the ultimate tool to keep your warehouse running like a well-oiled machine.',
+              'Streamline your operations and take the guesswork out of inventory tracking with our advanced Warehouse Inventory Management solution. Designed for accuracy and efficiency, it empowers you to manage stock levels, track shipments, and reduce overhead costs in real-time. Whether you\'re handling small-scale inventory or large-scale logistics, our solution optimizes every aspect of your supply chain, helping you reduce errors, minimize waste, and boost productivity. It\'s the ultimate tool to keep your warehouse running like a well-oiled machine.',
           imagePath: 'assets/images/inventory_solutions.png',
           iconAlignment: Alignment.topRight,
         ),
@@ -98,7 +98,7 @@ class ProductsSection extends StatelessWidget {
           title: 'In-Office Solutions',
           icon: Icons.route,
           description:
-              'Simplify workplace management and boost productivity with our suite of In-Office Solutions. From an intuitive attendance manager that tracks employee time seamlessly, to a smart calendar that organizes schedules effortlessly, and a task manager that ensures no deadline is missed, our tools are designed to eliminate inefficiencies. By integrating these solutions into your daily operations, you’ll foster better collaboration, improve time management, and focus on what truly matters—growing your business.',
+              'Simplify workplace management and boost productivity with our suite of In-Office Solutions. From an intuitive attendance manager that tracks employee time seamlessly, to a smart calendar that organizes schedules effortlessly, and a task manager that ensures no deadline is missed, our tools are designed to eliminate inefficiencies. By integrating these solutions into your daily operations, you\'ll foster better collaboration, improve time management, and focus on what truly matters—growing your business.',
           imagePath: 'assets/images/office_solutions.jpg',
           iconAlignment: Alignment.topLeft,
         ),
@@ -203,7 +203,7 @@ class ProductsSection extends StatelessWidget {
                     ),
                     const SizedBox(width: 12),
                     Expanded(
-                      child: Text(
+                      child: SelectableText(
                         title,
                         style: const TextStyle(
                           fontSize: 18,
@@ -215,7 +215,7 @@ class ProductsSection extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16), // Increased spacing
-                Text(
+                SelectableText(
                   description,
                   style: TextStyle(
                     fontSize: 14,
@@ -223,8 +223,7 @@ class ProductsSection extends StatelessWidget {
                     color: AppTheme.textDark.withOpacity(0.8),
                   ),
                   // Remove any text overflow restrictions
-                  softWrap: true,
-                  overflow: TextOverflow.visible,
+                  // overflow: TextOverflow.visible,
                 ),
               ],
             ),
@@ -245,7 +244,7 @@ class ProductsSection extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                const SelectableText(
                   'Transformative \nDigital Solutions',
                   style: TextStyle(
                     fontSize: 40,
@@ -367,7 +366,7 @@ class ProductsSection extends StatelessWidget {
             ),
             const SizedBox(width: 12),
             Expanded(
-              child: Text(
+              child: SelectableText(
                 title,
                 style: const TextStyle(
                   fontSize: 18,
@@ -381,17 +380,15 @@ class ProductsSection extends StatelessWidget {
         const SizedBox(height: 8),
         Padding(
           padding: const EdgeInsets.only(left: 44.0),
-          child: Text(
+          child: SelectableText(
             description,
             style: TextStyle(
               fontSize: 14,
               height: 1.5,
               color: AppTheme.textDark.withOpacity(0.8),
+              // maxLines: 5, // Set a limit if needed, or remove this line for unlimited
+              // softWrap: true,
             ),
-            // Remove text constraints
-            softWrap: true,
-            overflow: TextOverflow.visible,
-            maxLines: null, // Allow unlimited lines
           ),
         ),
       ],

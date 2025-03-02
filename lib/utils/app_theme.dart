@@ -44,22 +44,22 @@ class AppTheme {
 
   // Text themes for consistency
   static final TextTheme textTheme = TextTheme(
-    headline1: TextStyle(
+    displayLarge: TextStyle(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: textDark,
     ),
-    headline2: TextStyle(
+    displayMedium: TextStyle(
       fontSize: 28.0,
       fontWeight: FontWeight.w600,
       color: textDark,
     ),
-    bodyText1: TextStyle(
+    bodyLarge: TextStyle(
       fontSize: 16.0,
       fontWeight: FontWeight.normal,
       color: textDark,
     ),
-    bodyText2: TextStyle(
+    bodyMedium: TextStyle(
       fontSize: 14.0,
       fontWeight: FontWeight.normal,
       color: textDark,

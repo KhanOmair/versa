@@ -63,7 +63,7 @@ class FeatureCard extends StatelessWidget {
             ),
           ),
           SizedBox(height: isMobile(context) ? 12 : 16),
-          Text(
+          SelectableText(
             title,
             style: TextStyle(
               fontSize: isMobile(context) ? 16 : 18,
@@ -72,7 +72,7 @@ class FeatureCard extends StatelessWidget {
             ),
           ),
           SizedBox(height: isMobile(context) ? 8 : 12),
-          Text(
+          SelectableText(
             description,
             style: TextStyle(
               fontSize: isMobile(context) ? 12 : 14,

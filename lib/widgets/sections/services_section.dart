@@ -26,7 +26,7 @@ class ServicesSection extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       // Text content first
-                      Text(
+                      SelectableText(
                         'Enterprise Solutions\nThat Scale',
                         style: TextStyle(
                           fontSize: 28,
@@ -92,7 +92,7 @@ class ServicesSection extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              SelectableText(
                                 'Enterprise Solutions\nThat Scale',
                                 style: TextStyle(
                                   fontSize: isMobile(context) ? 28 : 40,
@@ -169,7 +169,7 @@ class ServicesSection extends StatelessWidget {
                     // Mobile layout as column
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      SelectableText(
                         'Innovative Solutions\nFor Modern Business',
                         style: TextStyle(
                           fontSize: 28,
@@ -269,7 +269,7 @@ class ServicesSection extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              SelectableText(
                                 'Innovative Solutions\nFor Modern Business',
                                 style: TextStyle(
                                   fontSize: isMobile(context) ? 28 : 40,
@@ -359,15 +359,15 @@ class ServicesSection extends StatelessWidget {
   }
 
   Widget _buildParagraph(String text, bool isMobile) {
-    return Text(
+    return SelectableText(
       text,
       style: TextStyle(
         fontSize: isMobile ? 14 : 16,
         height: 1.6,
         color: AppTheme.textDark.withOpacity(0.8),
       ),
-      softWrap: true,
-      overflow: TextOverflow.visible,
+      // softWrap: true,
+      // overflow: TextOverflow.visible,
     );
   }
 }

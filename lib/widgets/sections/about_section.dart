@@ -19,7 +19,7 @@ class AboutSection extends StatelessWidget {
               CrossAxisAlignment.start, // Aligns column items to the left
           children: [
             // Header
-            const Text(
+            const SelectableText(
               'About Us',
               style: TextStyle(
                 fontSize: 40,
@@ -30,7 +30,7 @@ class AboutSection extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             // Subheader
-            Text(
+            SelectableText(
               'Transforming Ideas into Digital Reality',
               style: TextStyle(
                 fontSize: 24,
@@ -85,7 +85,7 @@ class AboutSection extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints(
           maxWidth: double.infinity), // Limit paragraph width
-      child: Text(
+      child: SelectableText(
         text,
         style: TextStyle(
           fontSize: 16,
@@ -114,7 +114,7 @@ class AboutSection extends StatelessWidget {
         crossAxisAlignment:
             CrossAxisAlignment.start, // Aligns stat content to the left
         children: [
-          Text(
+          SelectableText(
             number,
             style: const TextStyle(
               fontSize: 36,
@@ -123,7 +123,7 @@ class AboutSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          Text(
+          SelectableText(
             label,
             style: TextStyle(
               fontSize: 16,

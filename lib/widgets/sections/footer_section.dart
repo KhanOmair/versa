@@ -177,7 +177,7 @@ class FooterSection extends StatelessWidget {
   Widget _buildFooterLink(String text) {
     return InkWell(
       onTap: () {},
-      child: Text(
+      child: SelectableText(
         text,
         style: TextStyle(
           color: AppTheme.primaryLight.withOpacity(0.8),
@@ -197,7 +197,7 @@ class FooterSection extends StatelessWidget {
           color: AppTheme.primaryLight.withOpacity(0.8),
         ),
         const SizedBox(width: 8),
-        Text(
+        SelectableText(
           text,
           style: TextStyle(
             color: AppTheme.primaryLight.withOpacity(0.8),

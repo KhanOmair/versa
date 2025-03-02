@@ -68,7 +68,7 @@ class HeroSection extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      SelectableText(
                         'Transform Your Business\nWith Our Tailored Software Solutions',
                         style: TextStyle(
                           fontSize: isMobile(context) ? 32 : 48,
@@ -116,7 +116,7 @@ class HeroSection extends StatelessWidget {
           },
         ),
       ),
-      child: Text(
+      child: SelectableText(
         'Get Started',
         style: TextStyle(
           fontSize: isMobile(context) ? 16 : 18,
