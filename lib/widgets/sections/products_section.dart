@@ -70,7 +70,7 @@ class ProductsSection extends StatelessWidget {
           width: double.infinity,
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: SelectableText(
+            child: Text(
               'Transformative Digital\nSolutions',
               style: TextStyle(
                 fontSize: 32,
@@ -203,7 +203,7 @@ class ProductsSection extends StatelessWidget {
                     ),
                     const SizedBox(width: 12),
                     Expanded(
-                      child: SelectableText(
+                      child: Text(
                         title,
                         style: const TextStyle(
                           fontSize: 18,
@@ -215,7 +215,7 @@ class ProductsSection extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16), // Increased spacing
-                SelectableText(
+                Text(
                   description,
                   style: TextStyle(
                     fontSize: 14,
@@ -244,7 +244,7 @@ class ProductsSection extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SelectableText(
+                const Text(
                   'Transformative \nDigital Solutions',
                   style: TextStyle(
                     fontSize: 40,
@@ -366,7 +366,7 @@ class ProductsSection extends StatelessWidget {
             ),
             const SizedBox(width: 12),
             Expanded(
-              child: SelectableText(
+              child: Text(
                 title,
                 style: const TextStyle(
                   fontSize: 18,
@@ -380,7 +380,7 @@ class ProductsSection extends StatelessWidget {
         const SizedBox(height: 8),
         Padding(
           padding: const EdgeInsets.only(left: 44.0),
-          child: SelectableText(
+          child: Text(
             description,
             style: TextStyle(
               fontSize: 14,

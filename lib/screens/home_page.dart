@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:versa_web/widgets/sections/about_section.dart';
 import '../widgets/sections/hero_section.dart';
 import '../widgets/sections/products_section.dart';
@@ -165,54 +166,56 @@ class HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: isMobile ? _buildMobileAppBar() : _buildDesktopAppBar(),
-      drawer: isMobile ? _buildMobileDrawer() : null,
-      body: NotificationListener<ScrollNotification>(
-        onNotification: (scrollNotification) {
-          if (!_isScrolling) {
-            _onScroll();
-          }
-          return false;
-        },
-        child: ScrollConfiguration(
-          behavior: ScrollConfiguration.of(context).copyWith(
-            physics: const ClampingScrollPhysics(),
-            dragDevices: {
-              PointerDeviceKind.touch,
-              PointerDeviceKind.mouse,
-            },
-          ),
-          child: SingleChildScrollView(
-            controller: _scrollController,
-            physics: const AlwaysScrollableScrollPhysics(
-              parent: RangeMaintainingScrollPhysics(),
+    return SelectionArea(
+      child: Scaffold(
+        appBar: isMobile ? _buildMobileAppBar() : _buildDesktopAppBar(),
+        drawer: isMobile ? _buildMobileDrawer() : null,
+        body: NotificationListener<ScrollNotification>(
+          onNotification: (scrollNotification) {
+            if (!_isScrolling) {
+              _onScroll();
+            }
+            return false;
+          },
+          child: ScrollConfiguration(
+            behavior: ScrollConfiguration.of(context).copyWith(
+              physics: const ClampingScrollPhysics(),
+              dragDevices: {
+                PointerDeviceKind.touch,
+                PointerDeviceKind.mouse,
+              },
             ),
-            child: RepaintBoundary(
-              child: Column(
-                children: [
-                  RepaintBoundary(
-                    child: HeroSection(
-                      fadeAnimation: _fadeAnimation,
-                      slideAnimation: _slideAnimation,
+            child: SingleChildScrollView(
+              controller: _scrollController,
+              physics: const AlwaysScrollableScrollPhysics(
+                parent: RangeMaintainingScrollPhysics(),
+              ),
+              child: RepaintBoundary(
+                child: Column(
+                  children: [
+                    RepaintBoundary(
+                      child: HeroSection(
+                        fadeAnimation: _fadeAnimation,
+                        slideAnimation: _slideAnimation,
+                      ),
                     ),
-                  ),
-                  RepaintBoundary(
-                    child: AboutSection(key: aboutKey),
-                  ),
-                  RepaintBoundary(
-                    child: ProductsSection(key: productsKey),
-                  ),
-                  RepaintBoundary(
-                    child: ServicesSection(key: servicesKey),
-                  ),
-                  RepaintBoundary(
-                    child: ContactSection(key: contactKey),
-                  ),
-                  const RepaintBoundary(
-                    child: FooterSection(),
-                  ),
-                ],
+                    RepaintBoundary(
+                      child: AboutSection(key: aboutKey),
+                    ),
+                    RepaintBoundary(
+                      child: ProductsSection(key: productsKey),
+                    ),
+                    RepaintBoundary(
+                      child: ServicesSection(key: servicesKey),
+                    ),
+                    RepaintBoundary(
+                      child: ContactSection(key: contactKey),
+                    ),
+                    const RepaintBoundary(
+                      child: FooterSection(),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -277,6 +280,24 @@ class HomePageState extends State<HomePage>
             () => scrollToSection(servicesKey, 'services'), 'services'),
         _buildNavButton('Contact Us',
             () => scrollToSection(contactKey, 'contact'), 'contact'),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppTheme.accent, // FA5F1A
+            foregroundColor: AppTheme.primaryLight, // FFFFFF
+            padding: EdgeInsets.symmetric(
+              horizontal: 25,
+              vertical: 11,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            elevation: 4,
+          ),
+          onPressed: () {
+            launchUrl(Uri.parse('tel:+16028380848'));
+          },
+          child: Text('Call Us'),
+        ),
         IconButton(
           icon: const Icon(Icons.qr_code_scanner),
           color: AppTheme.primaryLight,
@@ -322,6 +343,25 @@ class HomePageState extends State<HomePage>
                 () => scrollToSection(servicesKey, 'services'), 'services'),
             _buildMobileNavItem('Contact Us',
                 () => scrollToSection(contactKey, 'contact'), 'contact'),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppTheme.accent, // FA5F1A
+                foregroundColor: AppTheme.primaryLight, // FFFFFF
+                padding: EdgeInsets.symmetric(
+                  horizontal: 25,
+                  vertical: 11,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                elevation: 4,
+              ),
+              onPressed: () {
+                launchUrl(Uri.parse('tel:+16028380848'));
+              },
+              child: Text('Call Us'),
+            ),
             const Spacer(),
             Padding(
               padding: const EdgeInsets.all(16.0),

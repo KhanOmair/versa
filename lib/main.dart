@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Versa',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.themeData,
-      home: const HomePage(),
+      home: const SelectionArea(child: HomePage()),
     );
   }
 }

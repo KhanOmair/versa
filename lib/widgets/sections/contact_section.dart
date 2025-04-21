@@ -80,7 +80,7 @@ class _ContactSectionState extends State<ContactSection> {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content:
-                  SelectableText('Thank you for your message. We\'ll be in touch soon!'),
+                  Text('Thank you for your message. We\'ll be in touch soon!'),
               backgroundColor: Colors.green,
             ),
           );
@@ -102,7 +102,7 @@ class _ContactSectionState extends State<ContactSection> {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
-              content: SelectableText(
+              content: Text(
                   'There was an error sending your message. Please try again.'),
               backgroundColor: Colors.red,
             ),
@@ -149,7 +149,7 @@ class _ContactSectionState extends State<ContactSection> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Center(
-                        child: SelectableText(
+                        child: Text(
                           'Talk with our sales team',
                           style: TextStyle(
                             fontSize: 28,
@@ -161,7 +161,7 @@ class _ContactSectionState extends State<ContactSection> {
                       ),
                       const SizedBox(height: 12),
                       Center(
-                        child: SelectableText(
+                        child: Text(
                           'Fill out your information below and a Versa representative will reach out to you.',
                           style: TextStyle(
                             fontSize: 12,
@@ -215,7 +215,7 @@ class _ContactSectionState extends State<ContactSection> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SelectableText(
+                              Text(
                                 'You can also reach us at sales@versahq.online or call at',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
@@ -228,7 +228,7 @@ class _ContactSectionState extends State<ContactSection> {
                                   launchUrl(Uri.parse(
                                       'tel:+16028380848')); // Ensure you have the launch method available
                                 },
-                                child: SelectableText(
+                                child: Text(
                                   '+1 (602) 838-0848',
                                   style: TextStyle(
                                     fontSize: 14,
@@ -360,7 +360,7 @@ class _ContactSectionState extends State<ContactSection> {
                               child: _isLoading
                                   ? const CircularProgressIndicator(
                                       color: AppTheme.primaryLight)
-                                  : const SelectableText(
+                                  : const Text(
                                       'Submit',
                                       style: TextStyle(
                                         fontSize: 14,
@@ -385,7 +385,7 @@ class _ContactSectionState extends State<ContactSection> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SelectableText(
+                        Text(
                           'Talk with our sales\nteam',
                           style: TextStyle(
                             fontSize: 40,
@@ -395,7 +395,7 @@ class _ContactSectionState extends State<ContactSection> {
                           ),
                         ),
                         SizedBox(height: 16),
-                        SelectableText(
+                        Text(
                           'Fill out your information and a Versa\nrepresentative will reach out to you.',
                           style: TextStyle(
                             fontSize: 16,
@@ -585,7 +585,7 @@ class _ContactSectionState extends State<ContactSection> {
                             Center(
                               child: InkWell(
                                 onTap: () {},
-                                child: SelectableText(
+                                child: Text(
                                   'You can also reach us at sales@versahq.online or give us a call at +1 (602) 838-0848',
                                   style: TextStyle(
                                     fontSize: 14,
@@ -619,7 +619,7 @@ class _ContactSectionState extends State<ContactSection> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SelectableText(
+              Text(
                 title,
                 style: TextStyle(
                   fontSize: isMobile ? 14 : 16,
@@ -628,7 +628,7 @@ class _ContactSectionState extends State<ContactSection> {
                 ),
               ),
               const SizedBox(height: 4),
-              SelectableText(
+              Text(
                 description,
                 style: TextStyle(
                   fontSize: isMobile ? 12 : 14,
@@ -759,7 +759,7 @@ class _ContactSectionState extends State<ContactSection> {
             items: items.map((String item) {
               return DropdownMenuItem(
                 value: item,
-                child: SelectableText(item),
+                child: Text(item),
               );
             }).toList(),
             onChanged: onChanged,

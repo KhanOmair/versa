@@ -26,7 +26,7 @@ class ServicesSection extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       // Text content first
-                      SelectableText(
+                      Text(
                         'Enterprise Solutions\nThat Scale',
                         style: TextStyle(
                           fontSize: 28,
@@ -92,7 +92,7 @@ class ServicesSection extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SelectableText(
+                              Text(
                                 'Enterprise Solutions\nThat Scale',
                                 style: TextStyle(
                                   fontSize: isMobile(context) ? 28 : 40,
@@ -169,7 +169,7 @@ class ServicesSection extends StatelessWidget {
                     // Mobile layout as column
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SelectableText(
+                      Text(
                         'Innovative Solutions\nFor Modern Business',
                         style: TextStyle(
                           fontSize: 28,
@@ -269,7 +269,7 @@ class ServicesSection extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SelectableText(
+                              Text(
                                 'Innovative Solutions\nFor Modern Business',
                                 style: TextStyle(
                                   fontSize: isMobile(context) ? 28 : 40,
@@ -359,7 +359,7 @@ class ServicesSection extends StatelessWidget {
   }
 
   Widget _buildParagraph(String text, bool isMobile) {
-    return SelectableText(
+    return Text(
       text,
       style: TextStyle(
         fontSize: isMobile ? 14 : 16,
