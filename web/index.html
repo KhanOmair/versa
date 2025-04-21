@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16902458755"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16902458755');
+  </script>
+
+  <!-- Event snippet for Submit lead form conversion page -->
+  <script>
+    gtag('event', 'conversion', {
+      'send_to': 'AW-16902458755/o4MaCO3Kz6QaEIOb3Ps-',
+      'value': 1.0,
+      'currency': 'INR'
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16902458755"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16902458755');
+  </script>
+
+
+  <script>
+    gtag('config', 'AW-16902458755/6EMVCJOc0LsaEIOb3Ps-', {
+      'phone_conversion_number': '(602) 838-0848'
+    });
+  </script>
+
+
+
   <!-- Change base href to / since we're using a custom domain -->
   <base href="/">
 
@@ -15,7 +54,7 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>Versa</title>
   <link rel="manifest" href="manifest.json">
@@ -33,38 +72,49 @@
   <!-- Add CSS for smooth scrolling and touch gesture optimization -->
   <style>
     html {
-      scroll-behavior: smooth; /* Enables smooth scrolling for all browsers */
-      -webkit-overflow-scrolling: touch; /* Enables smooth scrolling for iOS */
+      scroll-behavior: smooth;
+      /* Enables smooth scrolling for all browsers */
+      -webkit-overflow-scrolling: touch;
+      /* Enables smooth scrolling for iOS */
       height: 100%;
     }
+
     body {
       margin: 0;
       height: 100%;
       width: 100%;
       display: flex;
       flex-direction: column;
-      overscroll-behavior: contain; /* Prevents bounce effects on iOS */
-      -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
+      overscroll-behavior: contain;
+      /* Prevents bounce effects on iOS */
+      -webkit-overflow-scrolling: touch;
+      /* iOS smooth scrolling */
       overflow: hidden;
-      background-color: #FFFFFF; /* Match your app's background color */
+      background-color: #FFFFFF;
+      /* Match your app's background color */
     }
+
     #flutter-content {
       flex: 1;
-      overflow-y: auto; /* Ensures scrolling works */
-      -webkit-overflow-scrolling: touch; /* Enables smooth scrolling for iOS */
+      overflow-y: auto;
+      /* Ensures scrolling works */
+      -webkit-overflow-scrolling: touch;
+      /* Enables smooth scrolling for iOS */
     }
+
     /* Force hardware acceleration for smoother rendering on iOS */
     #flutter-content {
       transform: translateZ(0);
     }
   </style>
 </head>
+
 <body>
   <script src="scripts/qr_worker.js"></script>
   <!-- Add a container for Flutter content -->
   <div id="flutter-content">
     <script>
-      window.addEventListener('load', function(ev) {
+      window.addEventListener('load', function (ev) {
         // Initialize Flutter's script loader
         _flutter = {};
         var serviceWorkerActivated = false;
@@ -91,12 +141,12 @@
         if ('serviceWorker' in navigator) {
           // Service worker URL (as provided by flutter build)
           var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-          
+
           navigator.serviceWorker.register(serviceWorkerUrl)
             .then((reg) => {
               if (!reg.active && (reg.installing || reg.waiting)) {
                 // No active web worker and we have installed or are installing one
-                (reg.installing || reg.waiting).addEventListener('statechange', function() {
+                (reg.installing || reg.waiting).addEventListener('statechange', function () {
                   if (this.state === 'activated') {
                     waitForServiceWorkerActivation(reg);
                   }
@@ -124,6 +174,10 @@
         }
       });
     </script>
+
+
   </div>
+
 </body>
+
 </html>
