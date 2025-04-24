@@ -2,40 +2,56 @@
 <html>
 
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- ✅ Google Tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16902458755"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    // ✅ Initialize Google Tag
     gtag('js', new Date());
-
     gtag('config', 'AW-16902458755');
+
+    // ✅ Define conversion function to be triggered from Flutter
+    function gtag_report_conversion_flutter(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16902458755/o4MaCO3Kz6QaEIOb3Ps-',
+        'value': 1.0,
+        'currency': 'INR',
+        'event_callback': callback
+      });
+      console.log("Google Ads conversion event fired.");
+      return false;
+    }
   </script>
 
-  <!-- Event snippet for Submit lead form conversion page -->
-  <script>
-    gtag('event', 'conversion', {
-      'send_to': 'AW-16902458755/o4MaCO3Kz6QaEIOb3Ps-',
-      'value': 1.0,
-      'currency': 'INR'
-    });
-  </script>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- ✅ Google Tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16902458755"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    // ✅ Initialize Google Tag
     gtag('js', new Date());
-
     gtag('config', 'AW-16902458755');
-  </script>
 
-
-  <script>
-    gtag('config', 'AW-16902458755/6EMVCJOc0LsaEIOb3Ps-', {
-      'phone_conversion_number': '(602) 838-0848'
-    });
+    // ✅ Function to trigger phone conversion - called from Dart
+    function triggerPhoneConversion() {
+      gtag('config', 'AW-16902458755/6EMVCJOc0LsaEIOb3Ps-', {
+        'phone_conversion_number': '(602) 838-0848'
+      });
+      console.log("Phone conversion tag fired.");
+    }
   </script>
 
 
@@ -61,7 +77,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "3702923770";
+    const serviceWorkerVersion = "3912468872";
   </script>
   <!-- This script adds the Flutter initialization JS code -->
   <script src="flutter.js" defer></script>
