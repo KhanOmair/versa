@@ -4,6 +4,7 @@ import 'package:versa_web/config/app_config.dart';
 import 'package:versa_web/utils/app_theme.dart';
 import 'dart:convert';
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:js' as js;
 
 class ContactSection extends StatefulWidget {
   const ContactSection({super.key});
@@ -77,6 +78,7 @@ class _ContactSectionState extends State<ContactSection> {
 
         // Show success message
         if (mounted || response.statusCode == 200) {
+          js.context.callMethod('triggerPhoneConversion');
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content:
