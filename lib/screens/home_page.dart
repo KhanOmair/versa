@@ -9,6 +9,7 @@ import '../widgets/sections/contact_section.dart';
 import '../widgets/sections/footer_section.dart';
 import '../utils/app_theme.dart';
 import 'dart:html' as html;
+import 'dart:js' as js;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,6 +28,8 @@ class HomePageState extends State<HomePage>
   final GlobalKey servicesKey = GlobalKey();
   final GlobalKey contactKey = GlobalKey();
   final GlobalKey aboutKey = GlobalKey();
+
+  final GlobalKey _menuKey = GlobalKey();
 
   // Track only selected section
   String _selectedSection = '';
@@ -236,6 +239,64 @@ class HomePageState extends State<HomePage>
       ),
       centerTitle: true,
       actions: [
+        PopupMenuButton<String>(
+          key: _menuKey,
+          onSelected: (value) {
+            js.context.callMethod('triggerPhoneConversion');
+            launchUrl(Uri.parse('tel:$value'));
+          },
+          itemBuilder: (context) => [
+            PopupMenuItem(
+              value: '+917993640715',
+              child: Row(
+                children: [
+                  Text('🇮🇳 +917993640715'),
+                ],
+              ),
+            ),
+            PopupMenuItem(
+              value: '+16028380848',
+              child: Row(
+                children: [
+                  Text('🇺🇸 +16028380848'),
+                ],
+              ),
+            ),
+          ],
+          child: IconButton(
+            onPressed: () {
+              final dynamic popupState = _menuKey.currentState;
+              popupState.showButtonMenu();
+            },
+            icon: const Icon(
+              Icons.phone,
+              color: AppTheme.textLight,
+            ),
+          ),
+          // child: ElevatedButton(
+          //   style: ElevatedButton.styleFrom(
+          //     backgroundColor: AppTheme.accent, // FA5F1A
+          //     foregroundColor: AppTheme.primaryLight, // FFFFFF
+          //     padding: const EdgeInsets.symmetric(
+          //       horizontal: 25,
+          //       vertical: 11,
+          //     ),
+          //     shape: RoundedRectangleBorder(
+          //       borderRadius: BorderRadius.circular(12),
+          //     ),
+          //     elevation: 4,
+          //   ),
+
+          //   onPressed: () {
+          //     final dynamic popupState = _menuKey.currentState;
+          //     popupState.showButtonMenu();
+          //   }, // disable default onPressed
+          //   child: const Icon(
+          //     Icons.phone,
+          //     color: AppTheme.textLight,
+          //   ),
+          // ),
+        ),
         // Add AR Scanner button for mobile
         IconButton(
           icon: const Icon(Icons.qr_code_scanner),
@@ -280,23 +341,68 @@ class HomePageState extends State<HomePage>
             () => scrollToSection(servicesKey, 'services'), 'services'),
         _buildNavButton('Contact Us',
             () => scrollToSection(contactKey, 'contact'), 'contact'),
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: AppTheme.accent, // FA5F1A
-            foregroundColor: AppTheme.primaryLight, // FFFFFF
-            padding: EdgeInsets.symmetric(
-              horizontal: 25,
-              vertical: 11,
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-            elevation: 4,
-          ),
-          onPressed: () {
-            launchUrl(Uri.parse('tel:+16028380848'));
+        // ElevatedButton(
+        //   style: ElevatedButton.styleFrom(
+        //     backgroundColor: AppTheme.accent, // FA5F1A
+        //     foregroundColor: AppTheme.primaryLight, // FFFFFF
+        //     padding: EdgeInsets.symmetric(
+        //       horizontal: 25,
+        //       vertical: 11,
+        //     ),
+        //     shape: RoundedRectangleBorder(
+        //       borderRadius: BorderRadius.circular(12),
+        //     ),
+        //     elevation: 4,
+        //   ),
+        //   onPressed: () {
+        //     launchUrl(Uri.parse('tel:+16028380848'));
+        //   },
+        //   child: Text('Call Us'),
+        // ),
+        PopupMenuButton<String>(
+          key: _menuKey,
+          onSelected: (value) {
+            js.context.callMethod('triggerPhoneConversion');
+            launchUrl(Uri.parse('tel:$value'));
           },
-          child: Text('Call Us'),
+          itemBuilder: (context) => [
+            PopupMenuItem(
+              value: '+917993640715',
+              child: Row(
+                children: [
+                  Text('🇮🇳 +917993640715'),
+                ],
+              ),
+            ),
+            PopupMenuItem(
+              value: '+16028380848',
+              child: Row(
+                children: [
+                  Text('🇺🇸 +16028380848'),
+                ],
+              ),
+            ),
+          ],
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: AppTheme.accent, // FA5F1A
+              foregroundColor: AppTheme.primaryLight, // FFFFFF
+              padding: const EdgeInsets.symmetric(
+                horizontal: 25,
+                vertical: 11,
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              elevation: 4,
+            ),
+
+            onPressed: () {
+              final dynamic popupState = _menuKey.currentState;
+              popupState.showButtonMenu();
+            }, // disable default onPressed
+            child: const Text('Call Us'),
+          ),
         ),
         IconButton(
           icon: const Icon(Icons.qr_code_scanner),
@@ -344,23 +450,69 @@ class HomePageState extends State<HomePage>
             _buildMobileNavItem('Contact Us',
                 () => scrollToSection(contactKey, 'contact'), 'contact'),
             const SizedBox(height: 16),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppTheme.accent, // FA5F1A
-                foregroundColor: AppTheme.primaryLight, // FFFFFF
-                padding: EdgeInsets.symmetric(
-                  horizontal: 25,
-                  vertical: 11,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                elevation: 4,
-              ),
-              onPressed: () {
-                launchUrl(Uri.parse('tel:+16028380848'));
+            // ElevatedButton(
+            //   style: ElevatedButton.styleFrom(
+            //     backgroundColor: AppTheme.accent, // FA5F1A
+            //     foregroundColor: AppTheme.primaryLight, // FFFFFF
+            //     padding: EdgeInsets.symmetric(
+            //       horizontal: 25,
+            //       vertical: 11,
+            //     ),
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(12),
+            //     ),
+            //     elevation: 4,
+            //   ),
+            //   onPressed: () {
+            //     launchUrl(Uri.parse('tel:+16028380848'));
+            //   },
+            //   child: Text('Call Us'),
+            // ),
+
+            PopupMenuButton<String>(
+              key: _menuKey,
+              onSelected: (value) {
+                js.context.callMethod('triggerPhoneConversion');
+                launchUrl(Uri.parse('tel:$value'));
               },
-              child: Text('Call Us'),
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  value: '+917993640715',
+                  child: Row(
+                    children: [
+                      Text('🇮🇳 +917993640715'),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  value: '+16028380848',
+                  child: Row(
+                    children: [
+                      Text('🇺🇸 +16028380848'),
+                    ],
+                  ),
+                ),
+              ],
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppTheme.accent, // FA5F1A
+                  foregroundColor: AppTheme.primaryLight, // FFFFFF
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 25,
+                    vertical: 11,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  elevation: 4,
+                ),
+
+                onPressed: () {
+                  final dynamic popupState = _menuKey.currentState;
+                  popupState.showButtonMenu();
+                }, // disable default onPressed
+                child: const Text('Call Us'),
+              ),
             ),
             const Spacer(),
             Padding(

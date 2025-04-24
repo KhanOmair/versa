@@ -78,7 +78,7 @@ class _ContactSectionState extends State<ContactSection> {
 
         // Show success message
         if (mounted || response.statusCode == 200) {
-          js.context.callMethod('triggerPhoneConversion');
+          js.context.callMethod('gtag_report_conversion_flutter');
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content:
