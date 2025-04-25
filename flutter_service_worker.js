@@ -3,14 +3,14 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "f9f4bc587873f6dc17ce7a3c12f5974c",
+const RESOURCES = {"flutter_bootstrap.js": "618cf28dd21cb2ea588f7dd120207cdc",
 "version.json": "7385e1aaf5578f50a7a4137bb23c44e2",
-"index.html": "9b70296b16563a558d64db3d00288169",
-"/": "9b70296b16563a558d64db3d00288169",
+"index.html": "eff6a4fb3fa7611320fb50912bc29531",
+"/": "eff6a4fb3fa7611320fb50912bc29531",
 "CNAME": "824e05fe3b10c03355b31686d4c89749",
 "images/card.png": "892cb3a6a0127abf6f5789f488f6fb67",
 "images/targets.mind": "4a3de31cebce55995567984b86c08998",
-"main.dart.js": "7ef0f20087ef3835fbd7d4af5f662d32",
+"main.dart.js": "2931cd7915b6ccc215a8b870cbda745c",
 "flutter.js": "4b2350e14c6650ba82871f60906437ea",
 "models/voiceover.m4a": "d2a48c5f8ceb0e2cc9f760afd7fdc864",
 "models/botanim.glb": "0412b02f8c2b866aa0917d9bb7734289",
